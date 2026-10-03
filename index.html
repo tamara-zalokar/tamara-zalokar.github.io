@@ -833,7 +833,8 @@ function pickLang(){
 let lang=pickLang(),filter="all";
 const t=k=>T[lang][k];
 const L=v=>v==null?"":(typeof v==="string"?v:v[lang]);
-const IMG=k=>`images/${k}.jpg`;
+const WEBP=new Set(["01-site","01-elevation"]);
+const IMG=k=>`images/${k}.${WEBP.has(k)?"webp":"jpg"}`;
 const grid=document.getElementById("grid"),count=document.getElementById("count");
 
 const coverAlt=p=>{const im=p.images.find(([k])=>k===p.cover);return `${L(p.title)}: ${im?L(im[1]):""}`.replace(/: $/,"")};
