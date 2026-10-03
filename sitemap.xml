@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://tamara-zalokar.eu/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tamara-zalokar.eu/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tamara-zalokar.eu/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://tamara-zalokar.eu/?lang=sl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tamara-zalokar.eu/"/>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/01-cafe.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/01-elevation.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/01-hero.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/01-model.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/01-site.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/02-details.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/02-landscape.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/02-photo.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/02-render.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/02-team.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/03-render.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/04-model-court.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/04-model-facade.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/04-site.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/05-plan.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/05-render.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/06-elevations.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/06-render.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/06-site.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/07-model.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/07-render-roof.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/07-render-wall.jpg</image:loc></image:image>
+    <image:image><image:loc>https://tamara-zalokar.eu/images/portrait.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://tamara-zalokar.eu/?lang=en</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tamara-zalokar.eu/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tamara-zalokar.eu/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://tamara-zalokar.eu/?lang=sl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tamara-zalokar.eu/"/>
+  </url>
+  <url>
+    <loc>https://tamara-zalokar.eu/?lang=de</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tamara-zalokar.eu/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tamara-zalokar.eu/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://tamara-zalokar.eu/?lang=sl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tamara-zalokar.eu/"/>
+  </url>
+  <url>
+    <loc>https://tamara-zalokar.eu/?lang=sl</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tamara-zalokar.eu/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tamara-zalokar.eu/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://tamara-zalokar.eu/?lang=sl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tamara-zalokar.eu/"/>
+  </url>
+</urlset>

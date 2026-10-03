@@ -1,79 +1,1007 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tamara Zalokar</title>
-    <meta name="description" content="Personal site of Tamara Zalokar." />
-    <style>
-      :root {
-        color-scheme: light dark;
-        --bg: #ffffff;
-        --fg: #1a1a1a;
-        --muted: #595959;
-        --accent: #0b5fff;
-      }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tamara Zalokar, Architecture Portfolio</title>
+<meta name="description" content="Architecture portfolio of Tamara Zalokar, M.Sc. Architecture, based in Vienna: a built community centre in South Africa, competitions with Viennese offices and academic projects from Ljubljana and Karlsruhe.">
+<meta name="author" content="Tamara Zalokar">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#F5F6FA">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://tamara-zalokar.eu/">
+<link rel="alternate" hreflang="en" href="https://tamara-zalokar.eu/?lang=en">
+<link rel="alternate" hreflang="de" href="https://tamara-zalokar.eu/?lang=de">
+<link rel="alternate" hreflang="sl" href="https://tamara-zalokar.eu/?lang=sl">
+<link rel="alternate" hreflang="x-default" href="https://tamara-zalokar.eu/">
+<!-- Icons -->
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<!-- Link previews (WhatsApp, iMessage, LinkedIn, Facebook, Slack, X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tamara Zalokar">
+<meta property="og:title" content="Tamara Zalokar, Architecture Portfolio">
+<meta property="og:description" content="M.Sc. Architecture, based in Vienna. Selected work from Ljubljana, Karlsruhe, South Africa and Vienna.">
+<meta property="og:url" content="https://tamara-zalokar.eu/">
+<meta property="og:image" content="https://tamara-zalokar.eu/og-image.jpg">
+<meta property="og:image:secure_url" content="https://tamara-zalokar.eu/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tamara Zalokar, Architecture Portfolio. Logo and name above a line drawing of Kamen Castle, Ljubljana Castle, the Nebotičnik, Thlagong, Karlsruhe and Vienna landmarks.">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="de_AT">
+<meta property="og:locale:alternate" content="sl_SI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tamara Zalokar, Architecture Portfolio">
+<meta name="twitter:description" content="M.Sc. Architecture, based in Vienna. Selected work from Ljubljana, Karlsruhe, South Africa and Vienna.">
+<meta name="twitter:image" content="https://tamara-zalokar.eu/og-image.jpg">
+<meta name="twitter:image:alt" content="Tamara Zalokar, Architecture Portfolio">
+<!-- Fonts are served from this website (no third-party requests) -->
+<link rel="preload" href="fonts/Schibsted.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Instrument.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Tamara Zalokar","jobTitle":"M.Sc. Architecture","alumniOf":[{"@type":"CollegeOrUniversity","name":"University of Ljubljana, Faculty of Architecture"},{"@type":"CollegeOrUniversity","name":"Karlsruhe Institute of Technology"}],
+ "address":{"@type":"PostalAddress","addressLocality":"Wien","addressCountry":"AT"}}
+</script>
+<style>
+  @font-face{font-family:"Schibsted Grotesk";src:url("fonts/Schibsted.woff2") format("woff2");font-weight:400 900;font-display:swap}
+  @font-face{font-family:"Architects Daughter";src:url("fonts/ArchitectsDaughter.woff2") format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:"Instrument Sans";src:url("fonts/Instrument.woff2") format("woff2");font-weight:400 700;font-stretch:75% 100%;font-display:swap}
+  :root{
+    --paper:#F5F6FA; --sheet:#FFFFFF; --concrete:#E6E8F0; --rule:#D5D9E6;
+    --ink:#171C33; --stone:#565D78; --blue:#868CB6; --blue-ink:#4E5591; --blue-deep:#2A2E52; --blue-soft:#ECEDF5; --blue-light:#A9AED3;
+    --display:"Schibsted Grotesk",system-ui,sans-serif;
+    --text:"Instrument Sans",system-ui,sans-serif;
+    --pad:clamp(1.25rem,4vw,3.5rem); --max:1360px;
+    --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2.5rem; --s5:4rem;
+    --section:clamp(5rem,11vw,9rem);
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:5rem}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  ::selection{background:var(--blue-ink);color:#fff}
+  a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+  img,svg{display:block;max-width:100%}
+  :focus-visible{outline:2px solid var(--blue-ink);outline-offset:3px}
+  .vh{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  main:focus{outline:none}
+  h1,h2,h3{font-family:var(--display);}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+  .skip{position:absolute;left:var(--pad);top:-4rem;background:var(--blue-ink);color:#fff;padding:.6rem 1rem;z-index:20;text-decoration:none}
+  .skip:focus{top:1rem}
 
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #121212;
-          --fg: #ededed;
-          --muted: #a3a3a3;
-          --accent: #7aa2ff;
-        }
-      }
+  /* Logo */
+  .mark{width:26px;height:26px;flex:none;transition:transform .5s var(--ease)}
+  .lockup{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+  .lockup:hover .mark{transform:rotate(-90deg)}
+  .lockup span{font-family:var(--display);font-weight:600;font-size:1.05rem}
+  header.site .lockup{opacity:0;pointer-events:none}
+  header.site .lockup.show{pointer-events:auto}
+  header.site .ltxt{line-height:1.2;font-weight:500;letter-spacing:-.01em}
+  header.site .lockup .mark{transition:transform .5s var(--ease)}
+      header.site .lockup.show:hover .mark{transform:rotate(-90deg)}
+  .hero h1{position:relative;z-index:11;pointer-events:none}
+  .hero h1 .line{width:max-content;max-width:100%}
+  .hero h1 .mv{display:inline-block;transform-origin:0 0;will-change:transform,opacity}
 
-      * {
-        box-sizing: border-box;
-      }
+  /* Header */
+  header.site{position:sticky;top:0;z-index:10;background:rgba(245,246,250,.85);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid transparent;transition:border-color .3s}
+  header.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:var(--s2);height:4.5rem;transition:height .35s var(--ease)}
+  header.site.scrolled{border-bottom-color:var(--rule)}
+    .right{display:flex;align-items:center;gap:clamp(1rem,3vw,2.5rem)}
+  nav ul{display:flex;gap:clamp(1rem,3vw,2.5rem);list-style:none;margin:0;padding:0}
+  nav a{position:relative;text-decoration:none;color:var(--stone);font-size:.9375rem;padding:.5rem 0;transition:color .2s}
+  nav a::after{content:"";position:absolute;left:0;right:0;bottom:.15rem;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+  nav a:hover,nav a[aria-current]{color:var(--ink)}
+  nav a:hover::after,nav a[aria-current]::after{transform:scaleX(1)}
+  .langs{display:flex;gap:2px;padding-left:clamp(1rem,2vw,1.5rem);border-left:1px solid var(--rule)}
+  .langs button{font:inherit;font-size:.8125rem;font-weight:500;height:2rem;min-width:2.25rem;padding:0 .4rem;border:0;border-radius:999px;background:none;color:var(--stone);cursor:pointer;transition:color .2s,background .2s}
+  .langs button:hover{color:var(--ink)}
+  .langs button[aria-pressed="true"]{background:var(--blue);color:var(--ink)}
+  .langs button:not([aria-pressed="true"]):hover{background:var(--blue-soft);color:var(--blue-ink)}
 
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 2rem;
-        background: var(--bg);
-        color: var(--fg);
-        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-        line-height: 1.6;
-      }
+  /* Hero */
+  .hero{padding-top:clamp(1.75rem,4.5vw,3.5rem)}
+  .hero h1{margin:0;font-weight:500;font-size:clamp(3.2rem,11vw,10rem);line-height:.9;letter-spacing:-.045em}
+  .hero h1 .line{display:block;animation:rise 1.1s var(--ease) both}
+  .hero h1 .line:nth-child(2){animation-delay:.12s}
+  .hero h1 .z{color:inherit;display:inline-block}
+  @keyframes rise{from{opacity:0;transform:translateY(.3em);filter:blur(8px)}}
+  @keyframes zIn{from{color:var(--ink);transform:skewX(-14deg)}}
+  .hero-text{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s3);margin-top:clamp(2rem,4vw,3.25rem);animation:rise 1s .35s var(--ease) both}
+  .hero-text p{margin:0}
+  .hero-text .lead{grid-column:1 / span 7;font-size:clamp(1.2rem,2vw,1.5rem);line-height:1.4;max-width:38ch}
+  .hero-text .aside{grid-column:9 / span 4;color:var(--stone);align-self:end;max-width:34ch}
+  .hero-figure{margin:clamp(2rem,4.5vw,3.5rem) 0 0}
+  .hero-drawing{color:var(--blue)}
+  .hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:clamp(1.5rem,3vw,2.25rem);animation:rise .9s 1.1s var(--ease) both}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:0 1.35rem;border-radius:999px;font:inherit;font-size:.9375rem;font-weight:500;text-decoration:none;border:1px solid var(--blue);transition:background .2s,color .2s,border-color .2s}
+  .btn.primary{background:var(--blue);color:var(--ink)}
+  .btn.primary:hover{background:var(--blue-ink);border-color:var(--blue-ink);color:#fff}
+  .btn.ghost{color:var(--blue-ink);background:transparent}
+  .btn.ghost:hover{background:var(--blue-soft)}
+  .btn.cta{min-height:3.5rem;padding:0 1.9rem 0 1.5rem;gap:.7rem;font-size:1.125rem;background:var(--blue);border-color:var(--blue);color:var(--ink);box-shadow:0 10px 24px -14px rgba(42,46,82,.55);transition:background .25s,color .25s,border-color .25s,transform .25s var(--ease),box-shadow .25s}
+  .btn.cta:hover{background:var(--blue-ink);border-color:var(--blue-ink);color:#fff;transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(42,46,82,.7)}
+  .btn.cta:active{transform:translateY(0)}
+  .pencil{width:1.6rem;height:1.5rem;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;overflow:visible;transition:transform .4s var(--ease)}
+  .pencil .tip{stroke-width:2.2}
+  .pencil .squiggle{stroke-width:1.2;stroke-dasharray:1;stroke-dashoffset:0;transition:stroke-dashoffset .5s var(--ease)}
+  .btn.cta.sketch:hover .pencil .squiggle,.btn.cta.sketch:focus-visible .pencil .squiggle{animation:squig .6s var(--ease)}
+  @keyframes squig{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+  .btn.cta:hover .pencil{transform:rotate(-12deg) translateX(-2px)}
+  /* Sketch state: hand-drawn outline that turns into a solid button on hover or keyboard focus */
+  .btn.cta.sketch{position:relative;isolation:isolate;background:transparent;border-color:transparent;box-shadow:none;color:var(--ink)}
+  .btn.cta.sketch>*{position:relative;z-index:1}
+  .btn.cta.sketch [data-i18n]{font-family:"Architects Daughter","Segoe Print","Bradley Hand",cursive;font-size:1.3rem;font-weight:400;letter-spacing:.015em;line-height:1;transform:translateY(1px)}
+  .btn.cta.sketch .sk{position:absolute;inset:-5px -7px;width:calc(100% + 14px);height:calc(100% + 10px);fill:none;stroke:var(--blue-ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;overflow:visible;z-index:0;pointer-events:none;animation:skIn 1.1s 1.5s var(--ease) both}
+  .btn.cta.sketch .sk path{stroke-dasharray:1 1;stroke-dashoffset:0;transition:stroke .3s,opacity .3s}
+  .btn.cta.sketch .sk .skfill{stroke:none;stroke-dasharray:none;fill:var(--blue-ink);opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.94,.8);transition:opacity .3s var(--ease),transform .4s var(--ease)}
+  .btn.cta.sketch .sk .sk2{stroke-width:1;opacity:.55}
+  .btn.cta.sketch .sk .sk3{stroke-width:1;opacity:.7}
+  @keyframes skIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+  .btn.cta.sketch .pencil{color:var(--blue-ink);transition:transform .4s var(--ease),color .3s}
+  .btn.cta.sketch:hover,.btn.cta.sketch:focus-visible{color:#fff;transform:translateY(-2px);background:transparent;border-color:transparent;box-shadow:none}
+  .btn.cta.sketch:hover .sk .skfill,.btn.cta.sketch:focus-visible .sk .skfill{opacity:1;transform:none}
+  .btn.cta.sketch::after{content:"";position:absolute;left:6%;right:6%;bottom:-2px;height:60%;border-radius:50%;background:rgba(42,46,82,.45);filter:blur(12px);opacity:0;z-index:-1;transition:opacity .35s var(--ease)}
+  .btn.cta.sketch:hover::after,.btn.cta.sketch:focus-visible::after{opacity:1}
+  .btn.cta.sketch:hover .sk path:not(.skfill),.btn.cta.sketch:focus-visible .sk path:not(.skfill){stroke:var(--ink)}
+  .btn.cta.sketch:hover .pencil,.btn.cta.sketch:focus-visible .pencil{color:#fff;transform:rotate(-12deg) translateX(-2px)}
+  .btn.cta.sketch:active{transform:translateY(0)}
+  .btn.cta.sketch:focus-visible{outline:2px solid var(--blue-ink);outline-offset:6px}
+  @media (forced-colors:active){.btn.cta.sketch{border-color:ButtonText}.btn.cta.sketch .sk{display:none}}
+  @media (forced-colors:active){.btn{border-color:ButtonText}}
+  @media (max-width:640px){.hero-cta .btn.cta{width:100%}}
+  .hero-photo{margin:clamp(2rem,4vw,3rem) 0 0}
+  .hero-photo img{width:100%;height:auto;animation:unveilHero 1.6s 1.2s var(--ease) both}
+  @keyframes unveilHero{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+  .hero-photo figcaption{margin-top:.75rem;color:var(--stone);font-size:.875rem}
+  .dwg{width:100%;height:auto;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round}
+  .dwg *{vector-effect:non-scaling-stroke}
+  .dwg .thin{stroke-width:.7;opacity:.8}
+  .dwg .fill{fill:currentColor;fill-opacity:.12}
+  .dwg .solid{fill:currentColor;fill-opacity:.85}
+  .dwg .clad{fill:currentColor;fill-opacity:.32}
+  .animate .dwg *{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2s cubic-bezier(.6,.1,.2,1) forwards;animation-delay:calc(var(--i,0) * 9ms + .4s)}
+  .animate .dwg g{stroke-dasharray:none;stroke-dashoffset:0;animation:none}
+  .animate .dwg .clad{fill-opacity:0;animation:draw 2s cubic-bezier(.6,.1,.2,1) forwards,cladIn .8s 2.4s forwards}
+  @keyframes cladIn{to{fill-opacity:.32}}
+  .animate .dwg .solid{fill-opacity:0;animation:draw 2s cubic-bezier(.6,.1,.2,1) forwards,fillIn .8s 2.4s forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes fillIn{to{fill-opacity:.85}}
+    .hero-figure figcaption{margin-top:.75rem;color:var(--stone);font-size:.875rem}
 
-      main {
-        max-width: 38rem;
-      }
+  /* Sections */
+  section{padding:var(--section) 0}
+  .section-head{display:flex;justify-content:space-between;align-items:center;gap:2.5rem var(--s3);flex-wrap:wrap;margin-bottom:calc(var(--s4) + 1rem)}
+  .section-head h2{position:relative}
+  .section-head h2::after{position:absolute;left:0;top:calc(100% + 1rem);margin:0}
+  .section-head .filters{padding-top:0}
+  h2{margin:0;font-weight:500;font-size:clamp(2.25rem,4.5vw,3.5rem);line-height:1;letter-spacing:-.02em}
 
-      h1 {
-        margin: 0 0 0.5rem;
-        font-size: clamp(2rem, 6vw, 3rem);
-        letter-spacing: -0.02em;
-      }
+  .filters{display:flex;gap:var(--s1);flex-wrap:wrap;align-items:center}
+  .filters button{font:inherit;font-size:.9375rem;min-height:2.5rem;background:transparent;color:var(--stone);border:1px solid var(--rule);border-radius:999px;padding:0 1.1rem;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+  .filters button:hover{color:var(--blue-ink);border-color:var(--blue);background:var(--blue-soft)}
+  .filters button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:var(--ink)}
+  .filters .sep{width:1px;height:1.5rem;background:var(--rule);margin:0 .35rem}
 
-      p {
-        margin: 0 0 1.5rem;
-        color: var(--muted);
-      }
+  /* Cards */
+  .grid{display:flex;flex-wrap:wrap;align-items:flex-start;column-gap:clamp(1.25rem,2.5vw,2rem);row-gap:clamp(3rem,6vw,4.5rem)}
+  .card{position:relative;flex:none;max-width:100%;display:flex;flex-direction:column;align-self:start;font:inherit;color:inherit;text-align:left;background:none;border:0;padding:0;cursor:pointer}
+  .plate{background:var(--concrete);overflow:hidden;width:100%}
+  .plate img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease),filter .6s}
+  .plate{position:relative}
+  .plate::after{content:"";position:absolute;inset:0;background:var(--blue);mix-blend-mode:screen;opacity:0;transition:opacity .5s var(--ease)}
+  .card:hover .plate::after{opacity:.22}
+  .card:hover .plate img{transform:scale(1.04)}
+  .card:hover h3{color:var(--blue-ink)}
+  .meta h3{transition:color .3s}
+  .meta{position:relative;padding-top:var(--s2)}
+  .meta::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--rule)}
+  .meta::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+  .card:hover .meta::after,.card:focus-within .meta::after{transform:scaleX(1)}
+  .card .open{all:unset;cursor:pointer}
+  .card .open::after{content:"";position:absolute;inset:0;z-index:1}
+  .card .open:focus-visible{outline:none}
+  .card:has(.open:focus-visible){outline:2px solid var(--blue-ink);outline-offset:6px}
+  .card:has(.open:focus-visible) h3{color:var(--blue-ink)}
+  .meta .kind{margin:0 0 .3rem;color:var(--blue-ink);font-size:.875rem;font-weight:500}
+  .meta h3{margin:0;font-size:clamp(1.25rem,1.8vw,1.5rem);font-weight:500;line-height:1.15;letter-spacing:-.01em}
+  .meta .where{margin:.4rem 0 0;color:var(--stone);font-size:.9375rem}
+  .count{color:var(--stone);font-size:.9375rem;margin:var(--s4) 0 0}
+  ::view-transition-group(*){animation-duration:.5s;animation-timing-function:var(--ease)}
+  /* ripple language switch */
+  @property --rr{syntax:"<length>";inherits:true;initial-value:0px}
+  html.vt-lang::view-transition-old(root),html.vt-lang::view-transition-new(root){animation:none;mix-blend-mode:normal}
+  html.vt-lang::view-transition-new(root){-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Cfilter%20id='f'%20x='-20%'%20y='-20%'%20width='140%'%20height='140%'%3E%3CfeGaussianBlur%20stdDeviation='2.2'/%3E%3C/filter%3E%3Cpath%20d='M93.32%2050.00%20C93.47%2051.86%2093.34%2053.84%2092.88%2055.64%20C92.41%2057.45%2091.49%2059.24%2090.51%2060.86%20C89.54%2062.47%2088.19%2063.92%2087.05%2065.35%20C85.90%2066.77%2084.68%2068.04%2083.63%2069.42%20C82.58%2070.79%2081.71%2072.18%2080.76%2073.61%20C79.82%2075.03%2079.02%2076.59%2077.97%2077.97%20C76.91%2079.34%2075.78%2080.76%2074.44%2081.86%20C73.10%2082.95%2071.52%2083.84%2069.93%2084.51%20C68.33%2085.18%2066.54%2085.52%2064.85%2085.86%20C63.17%2086.21%2061.46%2086.33%2059.80%2086.59%20C58.15%2086.85%2056.56%2087.12%2054.93%2087.42%20C53.29%2087.72%2051.67%2088.13%2050.00%2088.38%20C48.33%2088.63%2046.60%2088.88%2044.88%2088.91%20C43.16%2088.94%2041.40%2088.80%2039.67%2088.55%20C37.94%2088.31%2036.23%2087.87%2034.50%2087.43%20C32.76%2086.98%2031.03%2086.48%2029.27%2085.90%20C27.52%2085.32%2025.67%2084.75%2023.96%2083.93%20C22.25%2083.11%2020.46%2082.20%2019.03%2080.97%20C17.60%2079.74%2016.28%2078.22%2015.39%2076.56%20C14.50%2074.89%2014.00%2072.87%2013.70%2070.96%20C13.40%2069.05%2013.56%2066.96%2013.60%2065.08%20C13.64%2063.20%2013.92%2061.38%2013.92%2059.67%20C13.92%2057.95%2013.83%2056.40%2013.62%2054.79%20C13.42%2053.18%2012.97%2051.63%2012.69%2050.00%20C12.42%2048.37%2012.05%2046.68%2011.99%2045.00%20C11.92%2043.31%2012.02%2041.57%2012.31%2039.90%20C12.60%2038.23%2013.14%2036.58%2013.71%2034.97%20C14.28%2033.35%2015.00%2031.79%2015.72%2030.21%20C16.45%2028.63%2017.19%2027.03%2018.06%2025.49%20C18.93%2023.95%2019.84%2022.35%2020.96%2020.96%20C22.08%2019.56%2023.36%2018.22%2024.78%2017.13%20C26.19%2016.03%2027.83%2015.16%2029.44%2014.39%20C31.06%2013.63%2032.80%2013.12%2034.48%2012.53%20C36.16%2011.94%2037.82%2011.43%2039.51%2010.85%20C41.20%2010.27%2042.86%209.57%2044.61%209.06%20C46.36%208.54%2048.18%207.93%2050.00%207.76%20C51.82%207.58%2053.76%207.59%2055.53%208.02%20C57.30%208.45%2059.07%209.34%2060.62%2010.35%20C62.18%2011.36%2063.56%2012.82%2064.87%2014.09%20C66.18%2015.37%2067.28%2016.80%2068.48%2017.99%20C69.68%2019.18%2070.82%2020.24%2072.08%2021.23%20C73.34%2022.23%2074.70%2023.02%2076.04%2023.96%20C77.38%2024.91%2078.82%2025.80%2080.12%2026.89%20C81.42%2027.97%2082.68%2029.17%2083.82%2030.48%20C84.95%2031.78%2085.96%2033.22%2086.94%2034.70%20C87.91%2036.18%2088.82%2037.74%2089.66%2039.37%20C90.50%2041.00%2091.37%2042.70%2091.98%2044.47%20C92.59%2046.24%2093.17%2048.14%2093.32%2050.00Z'%20fill='black'%20filter='url(%23f)'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Cfilter%20id='f'%20x='-20%'%20y='-20%'%20width='140%'%20height='140%'%3E%3CfeGaussianBlur%20stdDeviation='2.2'/%3E%3C/filter%3E%3Cpath%20d='M93.32%2050.00%20C93.47%2051.86%2093.34%2053.84%2092.88%2055.64%20C92.41%2057.45%2091.49%2059.24%2090.51%2060.86%20C89.54%2062.47%2088.19%2063.92%2087.05%2065.35%20C85.90%2066.77%2084.68%2068.04%2083.63%2069.42%20C82.58%2070.79%2081.71%2072.18%2080.76%2073.61%20C79.82%2075.03%2079.02%2076.59%2077.97%2077.97%20C76.91%2079.34%2075.78%2080.76%2074.44%2081.86%20C73.10%2082.95%2071.52%2083.84%2069.93%2084.51%20C68.33%2085.18%2066.54%2085.52%2064.85%2085.86%20C63.17%2086.21%2061.46%2086.33%2059.80%2086.59%20C58.15%2086.85%2056.56%2087.12%2054.93%2087.42%20C53.29%2087.72%2051.67%2088.13%2050.00%2088.38%20C48.33%2088.63%2046.60%2088.88%2044.88%2088.91%20C43.16%2088.94%2041.40%2088.80%2039.67%2088.55%20C37.94%2088.31%2036.23%2087.87%2034.50%2087.43%20C32.76%2086.98%2031.03%2086.48%2029.27%2085.90%20C27.52%2085.32%2025.67%2084.75%2023.96%2083.93%20C22.25%2083.11%2020.46%2082.20%2019.03%2080.97%20C17.60%2079.74%2016.28%2078.22%2015.39%2076.56%20C14.50%2074.89%2014.00%2072.87%2013.70%2070.96%20C13.40%2069.05%2013.56%2066.96%2013.60%2065.08%20C13.64%2063.20%2013.92%2061.38%2013.92%2059.67%20C13.92%2057.95%2013.83%2056.40%2013.62%2054.79%20C13.42%2053.18%2012.97%2051.63%2012.69%2050.00%20C12.42%2048.37%2012.05%2046.68%2011.99%2045.00%20C11.92%2043.31%2012.02%2041.57%2012.31%2039.90%20C12.60%2038.23%2013.14%2036.58%2013.71%2034.97%20C14.28%2033.35%2015.00%2031.79%2015.72%2030.21%20C16.45%2028.63%2017.19%2027.03%2018.06%2025.49%20C18.93%2023.95%2019.84%2022.35%2020.96%2020.96%20C22.08%2019.56%2023.36%2018.22%2024.78%2017.13%20C26.19%2016.03%2027.83%2015.16%2029.44%2014.39%20C31.06%2013.63%2032.80%2013.12%2034.48%2012.53%20C36.16%2011.94%2037.82%2011.43%2039.51%2010.85%20C41.20%2010.27%2042.86%209.57%2044.61%209.06%20C46.36%208.54%2048.18%207.93%2050.00%207.76%20C51.82%207.58%2053.76%207.59%2055.53%208.02%20C57.30%208.45%2059.07%209.34%2060.62%2010.35%20C62.18%2011.36%2063.56%2012.82%2064.87%2014.09%20C66.18%2015.37%2067.28%2016.80%2068.48%2017.99%20C69.68%2019.18%2070.82%2020.24%2072.08%2021.23%20C73.34%2022.23%2074.70%2023.02%2076.04%2023.96%20C77.38%2024.91%2078.82%2025.80%2080.12%2026.89%20C81.42%2027.97%2082.68%2029.17%2083.82%2030.48%20C84.95%2031.78%2085.96%2033.22%2086.94%2034.70%20C87.91%2036.18%2088.82%2037.74%2089.66%2039.37%20C90.50%2041.00%2091.37%2042.70%2091.98%2044.47%20C92.59%2046.24%2093.17%2048.14%2093.32%2050.00Z'%20fill='black'%20filter='url(%23f)'/%3E%3C/svg%3E");-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:var(--rr) var(--rr);mask-size:var(--rr) var(--rr);-webkit-mask-position:calc(var(--rx,50%) - var(--rr) / 2) calc(var(--ry,0px) - var(--rr) / 2);mask-position:calc(var(--rx,50%) - var(--rr) / 2) calc(var(--ry,0px) - var(--rr) / 2)}
+  html.vt-lang .card{view-transition-name:none!important}
+  .lang-ring{position:fixed;z-index:2147483647;pointer-events:none;overflow:visible;max-width:none;max-height:none;transform:translate(-50%,-50%)}
+  .lang-ring path{fill:none;stroke:var(--blue);stroke-width:2;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 6px rgba(134,140,182,.45))}
 
-      nav a {
-        color: var(--accent);
-        text-decoration: none;
-        margin-right: 1.25rem;
-      }
+  /* About */
+  .about{border-top:1px solid var(--rule)}
+  .cols{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s3)}
+  .about .side{grid-column:1 / span 4}
+  .about .body{grid-column:6 / span 7}
+  .portrait{width:min(240px,60%);aspect-ratio:3/4;object-fit:cover;margin-top:var(--s4);filter:grayscale(1)}
+  .about .intro{font-size:clamp(1.2rem,2vw,1.45rem);line-height:1.45;margin:0 0 var(--s4);max-width:40ch}
+  .about h3{font-size:1.25rem;font-weight:500;margin:var(--s5) 0 var(--s2)}
+  .about h3:first-of-type{margin-top:0}
+  .timeline{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+  .timeline li{display:grid;grid-template-columns:10.5rem 1fr;gap:var(--s2);padding:1.1rem 0;border-bottom:1px solid var(--rule)}
+  .timeline .when{color:var(--blue-ink);font-weight:500;font-size:.9375rem;font-variant-numeric:tabular-nums}
+  .timeline b{display:block;font-weight:600}
+  .timeline .what{display:block;color:var(--stone);font-size:.9375rem}
+  .timeline p{margin:.35rem 0 0;max-width:60ch}
+  dl.facts{display:grid;grid-template-columns:minmax(8rem,11rem) 1fr;margin:0;border-top:1px solid var(--rule)}
+  dl.facts dt,dl.facts dd{padding:.85rem 0;border-bottom:1px solid var(--rule);margin:0}
+  dl.facts dt{color:var(--stone);padding-right:var(--s2)}
+  h2::after{content:"";display:block;width:2.5rem;height:3px;background:var(--blue);margin-top:1rem}
+  .info h2::after,.sheet h2::after{display:none}
 
-      nav a:hover,
-      nav a:focus-visible {
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>Tamara Zalokar</h1>
-      <p>Site under construction.</p>
-      <nav>
-        <a href="mailto:hello@example.com">Email</a>
-        <a href="https://github.com/tamara-zalokar">GitHub</a>
+  /* Contact */
+  .contact{background:var(--blue-deep);color:#fff;position:relative;overflow:hidden}
+  .contact::before{content:"";position:absolute;inset:auto -10% -60% auto;width:70vmax;height:70vmax;border-radius:50%;background:radial-gradient(closest-side,rgba(134,140,182,.35),transparent);pointer-events:none}
+  .contact .wrap{position:relative}
+  .contact h2{margin-bottom:var(--s4)}
+  .contact .email{display:inline-block;font-family:var(--display);font-weight:500;font-size:clamp(1.75rem,6vw,5rem);line-height:1.1;letter-spacing:-.025em;text-decoration:none;overflow-wrap:anywhere;padding-bottom:.1em;
+    background:linear-gradient(#fff,#fff) left bottom/0% 2px no-repeat,linear-gradient(var(--blue-light),var(--blue-light)) left bottom/100% 2px no-repeat;transition:background-size .6s var(--ease)}
+  .contact .email:hover{background-size:100% 2px,100% 2px}
+  .contact .email{min-height:1.1em;min-width:10ch}
+  .nojs{margin:.5rem 0 0;color:var(--blue-light)}
+  .contact .details{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:var(--s3);margin-top:var(--s5);color:var(--blue-light)}
+  .contact h2::after{background:var(--blue-light)}
+  .contact .details p{margin:0}
+  .contact .details a{color:#fff}
+  .contact :focus-visible{outline-color:#fff}
+
+  footer{background:var(--blue-deep);color:#AEB5DD;padding:0 0 2.5rem}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s2);border-top:1px solid #2E387A;padding-top:2rem}
+  footer .lockup{color:#fff}
+  footer .mark{width:22px;height:22px}
+  .flinks{display:flex;align-items:center;gap:var(--s3);margin:0;padding:0;list-style:none}
+  .flink{display:inline-flex;align-items:center;height:2.75rem;margin:0;padding:0;border:0;background:none;color:inherit;font:inherit;font-size:.875rem;line-height:1;text-decoration:none;cursor:pointer;transition:color .2s}
+  button.flink:hover{color:#fff;text-decoration:underline;text-underline-offset:.25em}
+
+  /* Project dialog */
+  dialog{border:0;padding:0;width:100%;max-width:min(1200px,96vw);max-height:94vh;background:var(--sheet);color:var(--ink);overscroll-behavior:contain}
+  dialog.small{max-width:min(640px,94vw)}
+  dialog::backdrop{background:rgba(23,28,51,.6);backdrop-filter:blur(4px)}
+  dialog[open]{animation:open .35s var(--ease)}
+  @keyframes open{from{opacity:0;transform:translateY(16px) scale(.985)}}
+  .sheet{padding:clamp(1.5rem,4vw,3.5rem)}
+  .topbar{position:sticky;top:0;display:flex;justify-content:flex-end;margin:calc(-1 * clamp(1.5rem,4vw,3.5rem)) calc(-1 * clamp(1.5rem,4vw,3.5rem)) 0;padding:1rem;z-index:2;pointer-events:none}
+  .topbar .close{pointer-events:auto;margin:0;background:rgba(255,255,255,.92)}
+  .sheet .kind{margin:0 0 .5rem;color:var(--blue-ink);font-weight:500}
+  .sheet h2{font-size:clamp(1.9rem,4vw,3.25rem);max-width:22ch;line-height:1.02}
+  .sheet .subtitle{margin:.75rem 0 0;color:var(--stone);max-width:60ch}
+  .dbody{display:grid;grid-template-columns:3fr 2fr;gap:clamp(1.5rem,4vw,3.5rem);margin-top:var(--s4)}
+  .dtext p{margin:0 0 1.1rem;max-width:62ch}
+  .dbody dl.facts{align-self:start}
+  .dlead{margin:var(--s4) 0 0}.dlead img{width:100%;height:auto;max-height:70vh;object-fit:contain;background:var(--concrete)}.dlead figcaption{margin-top:.5rem;color:var(--stone);font-size:.875rem}
+  .dtext h3{font-size:1.1rem;font-weight:600;margin:var(--s3) 0 .4rem}
+  .dtext .credits{color:var(--stone);font-size:.9375rem}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2vw,1.5rem);margin-top:var(--s5)}
+  .gallery figure{margin:0}
+  .gallery figure.full{grid-column:1 / -1}
+  .gallery img{width:100%;height:auto;background:var(--concrete)}
+  .gallery figcaption{margin-top:.5rem;color:var(--stone);font-size:.875rem}
+  .info{padding:clamp(1.5rem,3vw,2.75rem)}
+  .info h2{font-size:clamp(1.75rem,3vw,2.4rem);margin:0 0 1.25rem}
+  .info>p{margin:0 0 var(--s3);max-width:48ch}
+  .close{font:inherit;font-size:.9375rem;margin-top:var(--s4);min-height:2.5rem;background:none;border:1px solid var(--blue);color:var(--blue-ink);padding:0 1.2rem;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
+  .close:hover{background:var(--blue)!important;color:var(--ink)}
+
+  @supports (animation-timeline: view()){
+    @media (prefers-reduced-motion:no-preference){
+      .card{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+      .card .plate{animation:unveil linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+      .reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 20%}
+    }
+  }
+  @keyframes reveal{from{opacity:0;transform:translateY(48px)}}
+  @keyframes unveil{from{clip-path:inset(22% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+  }
+  @media (max-width:860px){
+    .hero-text .lead,.hero-text .aside,.about .side,.about .body{grid-column:1 / -1}
+    .dbody,.gallery{grid-template-columns:1fr}
+    dl.facts,.timeline li{grid-template-columns:1fr}
+    dl.facts dt{border-bottom:0;padding-bottom:0}
+    dl.facts dd{padding-top:.2rem}
+    .timeline li{gap:.2rem}
+    .filters .sep{display:none}
+    
+  }
+  @media (max-width:640px){ header.site .ltxt{display:none} }
+  @media (max-width:420px){ nav ul{gap:.85rem} .langs{padding-left:.6rem} .langs button{min-width:2rem} }
+  /* Windows high-contrast / forced colours: keep selected states and outlines visible */
+  @media (forced-colors:active){
+    .filters button[aria-pressed="true"],.langs button[aria-pressed="true"]{outline:2px solid CanvasText;outline-offset:2px;text-decoration:underline}
+    .card:has(.open:focus-visible){outline-color:Highlight}
+    .mark path{forced-color-adjust:none}
+  }
+  @media (max-width:380px){ header.site .wrap{gap:.5rem} .right{gap:.6rem} nav ul{gap:.65rem} nav a{font-size:.8125rem} .langs{padding-left:.45rem;gap:0} .langs button{min-width:1.75rem;padding:0 .2rem;font-size:.75rem} }
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 100 100">
+    <path d="M0 0H60V14H37V100H23V14H0Z" fill="currentColor"/>
+    <path d="M40 0H100V14L58 86H100V100H40V86L82 14H40Z" fill="var(--z,#868CB6)" fill-opacity=".92"/>
+  </symbol>
+</svg>
+
+<header class="site" id="header">
+  <div class="wrap">
+    <a class="lockup" href="#main" data-i18n-label="toTop" aria-label="Tamara Zalokar, back to top">
+      <svg class="mark" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="ltxt"><span class="n1">Tamara</span> <span class="n2">Zalokar</span></span>
+    </a>
+    <div class="right">
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#work" data-i18n="navWork"></a></li>
+          <li><a href="#about" data-i18n="navAbout"></a></li>
+          <li><a href="#contact" data-i18n="navContact"></a></li>
+        </ul>
       </nav>
-    </main>
-  </body>
+      <div class="langs" role="group" id="langs">
+        <button type="button" data-lang="en" lang="en" aria-pressed="true">EN<span class="vh"> English</span></button>
+        <button type="button" data-lang="de" lang="de" aria-pressed="false">DE<span class="vh"> Deutsch</span></button>
+        <button type="button" data-lang="sl" lang="sl" aria-pressed="false">SL<span class="vh"> Slovenščina</span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="hero wrap">
+    <h1 aria-label="Tamara Zalokar"><span class="line" aria-hidden="true"><span class="mv" data-t="n1"><span class="z">T</span>amara</span></span><span class="line" aria-hidden="true"><span class="mv" data-t="n2"><span class="z">Z</span>alokar</span></span></h1>
+    <div class="hero-text">
+      <p class="lead" data-i18n="lead"></p>
+      <p class="aside" data-i18n="aside"></p>
+    </div>
+    <div class="hero-figure">
+      <div class="hero-drawing animate" id="heroDrawing" role="img"></div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn cta sketch" href="#contact"><svg class="sk" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true"><path class="skfill" d="M16 7 C78 3.5 214 3 286 6.5 C297 9 298 49 289 53.5 C206 57.5 92 57 13 54.5 C2.5 50 3 12.5 16 7 Z"/><path pathLength="1" d="M16 7 C78 3.5 214 3 286 6.5 C297 9 298 49 289 53.5 C206 57.5 92 57 13 54.5 C2.5 50 3 12.5 17 6"/><path class="sk2" pathLength="1" d="M22 4.5 C104 8 196 2.5 293 9.5 C299.5 22 297.5 41 292 57 C190 54 88 59.5 9 56 C1 42 2.5 21 10 9.5"/><path class="sk3" pathLength="1" d="M6 14 L1 8 M292 50 L299 58"/></svg><svg class="pencil" viewBox="0 0 28 26" aria-hidden="true"><path d="M5.2 19.6 L6.6 14.9 L17.8 3.9 C19 2.8 20.6 2.9 21.6 4 L22.4 4.9 C23.4 6 23.3 7.5 22.2 8.6 L11.1 19.4 L5.6 20.4"/><path d="M15.6 6.2 L20.1 10.6" /><path d="M7 15.3 L10.8 19"/><path d="M6.2 18.2 L7.6 19.5" class="tip"/><path d="M3 24.2 C6 22.6 8.4 25.4 11.4 23.8 C13.6 22.7 15.6 24.6 18 23.6" class="squiggle" pathLength="1"/></svg><span data-i18n="ctaContact">Let's work together</span></a>
+    </div>
+    <figure class="hero-photo">
+      <img src="images/01-elevation-hero.jpg" id="heroImg" alt="" width="1400" height="560">
+      <figcaption data-i18n="imgCap"></figcaption>
+    </figure>
+  </div>
+
+  <section id="work" aria-labelledby="workTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="workTitle" data-i18n="workTitle"></h2>
+        <div class="filters" role="group" id="filters">
+          <button type="button" data-filter="all" aria-pressed="true"></button>
+          <button type="button" data-filter="built" aria-pressed="false"></button>
+          <button type="button" data-filter="competition" aria-pressed="false"></button>
+          <button type="button" data-filter="academic" aria-pressed="false"></button>
+          <span class="sep" aria-hidden="true"></span>
+          <button type="button" data-filter="landscape" aria-pressed="false"></button>
+          <button type="button" data-filter="interior" aria-pressed="false"></button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="count" id="count" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section id="about" class="about" aria-labelledby="aboutTitle">
+    <div class="wrap cols">
+      <div class="side reveal">
+        <h2 id="aboutTitle" data-i18n="aboutTitle"></h2>
+        <img class="portrait" id="portrait" src="images/portrait.jpg" alt="Portrait of Tamara Zalokar" width="300" height="400" loading="lazy">
+      </div>
+      <div class="body">
+        <p class="intro" data-i18n="intro"></p>
+        <h3 data-i18n="expTitle"></h3>
+        <ul class="timeline" id="exp"></ul>
+        <h3 data-i18n="eduTitle"></h3>
+        <ul class="timeline" id="edu"></ul>
+        <h3 data-i18n="skillsTitle"></h3>
+        <dl class="facts" id="skills"></dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contactTitle">
+    <div class="wrap">
+      <h2 id="contactTitle" data-i18n="contactTitle"></h2>
+      <a class="email" id="emailLink" href="#contact" data-reveal="email"><span data-i18n="emailPh">Email address</span></a>
+      <noscript><p class="nojs">hello [at] tamara-zalokar [dot] eu</p></noscript>
+      <div class="details">
+        <p><span data-i18n="phone"></span><br><a href="#contact" id="phoneLink" data-reveal="phone"><span data-i18n="phonePh">Phone number</span></a></p>
+        <p><span data-i18n="address"></span><br><span data-reveal="street"></span><br><span data-reveal="city"></span>, <span data-i18n="austria"></span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="lockup" href="#main" data-i18n-label="toTop" aria-label="Tamara Zalokar, back to top">
+      <svg class="mark" aria-hidden="true"><use href="#logo"/></svg>
+      <span>Tamara Zalokar</span>
+    </a>
+    <ul class="flinks">
+      <li><button type="button" class="flink" data-open="impressum" aria-haspopup="dialog" data-i18n="legal"></button></li>
+      <li><button type="button" class="flink" data-open="privacy" aria-haspopup="dialog" data-i18n="privacy"></button></li>
+      <li><span class="flink">&copy; 2026 Tamara Zalokar</span></li>
+    </ul>
+  </div>
+</footer>
+
+<dialog id="dialog" aria-labelledby="dlgTitle">
+  <div class="sheet">
+    <div class="topbar"><button class="close" type="button" data-i18n="close"></button></div>
+    <p class="kind" id="dlgKind"></p>
+    <h2 id="dlgTitle"></h2>
+    <p class="subtitle" id="dlgSub"></p>
+    <figure class="dlead" id="dlgLead"></figure>
+    <div class="dbody">
+      <div class="dtext" id="dlgText"></div>
+      <dl class="facts" id="dlgFacts"></dl>
+    </div>
+    <div class="gallery" id="dlgGallery"></div>
+  </div>
+</dialog>
+
+<dialog id="impressum" class="small" aria-labelledby="impTitle">
+  <div class="info">
+    <h2 id="impTitle" data-i18n="legal"></h2>
+    <dl class="facts" id="impFacts"></dl>
+    <button class="close" type="button" data-i18n="close"></button>
+  </div>
+</dialog>
+
+<dialog id="privacy" class="small" aria-labelledby="privTitle">
+  <div class="info">
+    <h2 id="privTitle" data-i18n="privacy"></h2>
+    <p data-i18n="privacyText"></p>
+    <button class="close" type="button" data-i18n="close"></button>
+  </div>
+</dialog>
+
+<script>
+/* ================= INTERFACE TEXT ================= */
+const T={
+en:{title:"Tamara Zalokar, Architecture Portfolio",desc:"Portfolio of Tamara Zalokar, M.Sc. Architecture, based in Vienna.",
+  skip:"Skip to content",navWork:"Work",navAbout:"About",navContact:"Contact",langLabel:"Language",
+  lead:"Architecture graduate based in Vienna. Selected work from my studies in Ljubljana and Karlsruhe, a built project in South Africa and competitions in practice.",
+  aside:"Master of Science in Architecture, University of Ljubljana, 2026.",
+  portraitAlt:"Portrait of Tamara Zalokar",emailPh:"Email address",phonePh:"Phone number",toTop:"Tamara Zalokar, back to top",ctaContact:"Let's work together",imgCap:"Research centre at Kamen Castle, south elevation, 1:250",heroCap:"From left: Kamen Castle with my research centre, Ljubljana Castle and the Nebotičnik, Thlagong in South Africa, the Pyramid and Palace in Karlsruhe, the Riesenrad and St. Stephen's Cathedral in Vienna.",
+  workTitle:"Selected work",filterLabel:"Filter projects",
+  f:{all:"All",built:"Built",competition:"Competitions",academic:"Academic",landscape:"Landscape",interior:"Interiors"},
+  count:(n,t)=>`Showing ${n} of ${t} projects`,
+  aboutTitle:"About",
+  intro:"I studied architecture at the University of Ljubljana and at KIT Karlsruhe, and completed my Master of Science in September 2026. Alongside my studies I worked on competitions, construction documents and models at Juri Troy Architects, sipa Architektur and heri & salli, and helped design and build a community centre in South Africa.",
+  expTitle:"Experience",eduTitle:"Education",skillsTitle:"Skills and languages",
+  contactTitle:"Get in touch",phone:"Telephone",address:"Address",austria:"Austria",
+  legal:"Legal notice",privacy:"Privacy",close:"Close",
+  labels:{type:"Type",place:"Location",year:"Year",context:"Context",team:"Team",mentors:"Mentors"},
+  role:"My contribution",credits:"Credits",
+  imp:[["Name","Tamara Zalokar, M.Sc. Architecture"],["Address","{ADDRESS}, Austria"],["Contact","{CONTACT}"],["Content","Personal portfolio. Project credits and image sources are listed with each project."]],
+  privacyText:"This website does not use cookies or tracking. All fonts are hosted on this website, so no data is sent to third parties. If you write to me by email, I use your details only to reply to your enquiry."},
+de:{title:"Tamara Zalokar, Architekturportfolio",desc:"Portfolio von Tamara Zalokar, M.Sc. Architektur, Wien.",
+  skip:"Zum Inhalt springen",navWork:"Projekte",navAbout:"Über mich",navContact:"Kontakt",langLabel:"Sprache",
+  lead:"Architekturabsolventin mit Sitz in Wien. Ausgewählte Arbeiten aus dem Studium in Ljubljana und Karlsruhe, ein realisiertes Projekt in Südafrika und Wettbewerbe aus der Praxis.",
+  aside:"Master of Science in Architektur, Universität Ljubljana, 2026.",
+  portraitAlt:"Porträt von Tamara Zalokar",emailPh:"E-Mail-Adresse",phonePh:"Telefonnummer",toTop:"Tamara Zalokar, zurück nach oben",ctaContact:"Arbeiten wir zusammen",imgCap:"Forschungszentrum an der Burg Kamen, Ansicht Süd, M 1:250",heroCap:"Von links: Burg Kamen mit meinem Forschungszentrum, die Burg von Ljubljana und der Nebotičnik, Thlagong in Südafrika, Pyramide und Schloss in Karlsruhe, Riesenrad und Stephansdom in Wien.",
+  workTitle:"Ausgewählte Projekte",filterLabel:"Projekte filtern",
+  f:{all:"Alle",built:"Realisiert",competition:"Wettbewerbe",academic:"Studium",landscape:"Landschaft",interior:"Innenraum"},
+  count:(n,t)=>`${n} von ${t} Projekten`,
+  aboutTitle:"Über mich",
+  intro:"Ich habe Architektur an der Universität Ljubljana und am KIT Karlsruhe studiert und im September 2026 meinen Master of Science abgeschlossen. Neben dem Studium habe ich bei Juri Troy Architects, sipa Architektur und heri & salli an Wettbewerben, Ausführungsplänen und Modellen mitgearbeitet und ein Gemeinschaftszentrum in Südafrika mitgeplant und mitgebaut.",
+  expTitle:"Berufserfahrung",eduTitle:"Ausbildung",skillsTitle:"Kenntnisse und Sprachen",
+  contactTitle:"Kontakt",phone:"Telefon",address:"Adresse",austria:"Österreich",
+  legal:"Impressum",privacy:"Datenschutz",close:"Schließen",
+  labels:{type:"Art",place:"Ort",year:"Jahr",context:"Rahmen",team:"Team",mentors:"Betreuung"},
+  role:"Mein Beitrag",credits:"Beteiligte",
+  imp:[["Name","Tamara Zalokar, M.Sc. Architektur"],["Adresse","{ADDRESS}, Österreich"],["Kontakt","{CONTACT}"],["Inhalt","Persönliches Portfolio. Beteiligte und Bildquellen sind beim jeweiligen Projekt angegeben."]],
+  privacyText:"Diese Website verwendet keine Cookies und kein Tracking. Alle Schriften werden von dieser Website selbst geladen, es werden keine Daten an Dritte übertragen. Wenn Sie mir eine E-Mail schreiben, verwende ich Ihre Daten nur zur Beantwortung Ihrer Anfrage."},
+sl:{title:"Tamara Zalokar, arhitekturni portfelj",desc:"Portfelj Tamare Zalokar, magistrice arhitekture, Dunaj.",
+  skip:"Preskoči na vsebino",navWork:"Projekti",navAbout:"O meni",navContact:"Kontakt",langLabel:"Jezik",
+  lead:"Magistrica arhitekture s sedežem na Dunaju. Izbrana dela iz študija v Ljubljani in Karlsruheju, izveden projekt v Južni Afriki in natečaji iz prakse.",
+  aside:"Magisterij arhitekture, Univerza v Ljubljani, 2026.",
+  portraitAlt:"Portret Tamare Zalokar",emailPh:"E-poštni naslov",phonePh:"Telefonska številka",toTop:"Tamara Zalokar, nazaj na vrh",ctaContact:"Sodelujva",imgCap:"Raziskovalni center pri gradu Kamen, južna fasada, M 1:250",heroCap:"Od leve: grad Kamen z mojim raziskovalnim centrom, Ljubljanski grad in Nebotičnik, Thlagong v Južni Afriki, piramida in palača v Karlsruheju, Riesenrad in stolnica sv. Štefana na Dunaju.",
+  workTitle:"Izbrani projekti",filterLabel:"Filtriraj projekte",
+  f:{all:"Vse",built:"Izvedeno",competition:"Natečaji",academic:"Študij",landscape:"Krajina",interior:"Notranjost"},
+  count:(n,t)=>`Prikaz: ${n} od ${t} projektov`,
+  aboutTitle:"O meni",
+  intro:"Arhitekturo sem študirala na Univerzi v Ljubljani in na KIT v Karlsruheju ter septembra 2026 zaključila magistrski študij. Ob študiju sem v birojih Juri Troy Architects, sipa Architektur in heri & salli sodelovala pri natečajih, izvedbenih načrtih in maketah ter pomagala načrtovati in graditi skupnostni center v Južni Afriki.",
+  expTitle:"Delovne izkušnje",eduTitle:"Izobrazba",skillsTitle:"Znanja in jeziki",
+  contactTitle:"Kontakt",phone:"Telefon",address:"Naslov",austria:"Avstrija",
+  legal:"Impresum",privacy:"Zasebnost",close:"Zapri",
+  labels:{type:"Vrsta",place:"Lokacija",year:"Leto",context:"Okvir",team:"Ekipa",mentors:"Mentorji"},
+  role:"Moj prispevek",credits:"Sodelujoči",
+  imp:[["Ime","Tamara Zalokar, mag. inž. arh."],["Naslov","{ADDRESS}, Avstrija"],["Kontakt","{CONTACT}"],["Vsebina","Osebni portfelj. Sodelujoči in viri slik so navedeni pri posameznem projektu."]],
+  privacyText:"Ta spletna stran ne uporablja piškotkov ali sledenja. Vse pisave se nalagajo s te spletne strani, zato se podatki ne pošiljajo tretjim osebam. Če mi pišete po e-pošti, vaše podatke uporabim le za odgovor na vaše povpraševanje."}
+};
+
+/* ================= CV (from portfolio PDF) ================= */
+const EXP=[
+ {when:"05/2025 – 11/2025",org:"heri & salli Architektur",
+  what:{en:"6-month Erasmus internship",de:"6-monatiges Erasmus-Praktikum",sl:"6-mesečna praksa Erasmus"},
+  text:{en:"2D and 3D drawings; the winning competition entry Aspern F7 (1st prize); design and construction documents for the two pavilions Schuppen & Schuppen; a facade study; concept graphics; a study for converting a church into housing (Pallottihaus); complex construction details in 3D; construction drawings, models and concept visualisations.",
+        de:"Planerstellung (2D/3D); Mitarbeit am Siegerprojekt Aspern F7 (1. Preis); Entwurf und Ausführungsplanung der zwei Pavillons Schuppen & Schuppen; Fassadenstudie; Konzeptgrafiken; Umnutzungsstudie einer Kirche in ein Wohngebäude (Pallottihaus); komplexe Konstruktionsdetails in 3D; Ausführungspläne, Modelle und grafische Konzeptvisualisierungen.",
+        sl:"Risbe 2D in 3D; sodelovanje pri zmagovalnem natečajnem projektu Aspern F7 (1. nagrada); zasnova in izvedbeni načrti dveh paviljonov Schuppen & Schuppen; študija fasade; konceptne grafike; študija preureditve cerkve v stanovanjsko stavbo (Pallottihaus); zahtevni konstrukcijski detajli v 3D; izvedbeni načrti, makete in konceptne vizualizacije."}},
+ {when:"08/2024 – 08/2026",org:"URBI d.o.o., Oblikovanje prostora",
+  what:{en:"Part-time job during studies",de:"Nebenjob während des Studiums",sl:"Delo ob študiju"},
+  text:{en:"3D modelling, visualisation and rendering.",de:"3D-Modellierung, Visualisierung und Rendering.",sl:"3D-modeliranje, vizualizacija in upodabljanje."}},
+ {when:"10/2024 – 04/2025",org:"sipa Architektur",
+  what:{en:"6-month Erasmus internship",de:"6-monatiges Erasmus-Praktikum",sl:"6-mesečna praksa Erasmus"},
+  text:{en:"Model building, 2D and 3D drawings.",de:"Modellbau, 2D- und 3D-Zeichnung.",sl:"Izdelava maket, risbe 2D in 3D."}},
+ {when:"03/2024 – 09/2024",org:"Juri Troy Architects",
+  what:{en:"6-month Erasmus internship",de:"6-monatiges Erasmus-Praktikum",sl:"6-mesečna praksa Erasmus"},
+  text:{en:"Model building, competition projects and presentation graphics, 2D and 3D drawings.",de:"Modellbau, Mitarbeit an Wettbewerbsprojekten und Präsentationsgrafik, 2D- und 3D-Zeichnung.",sl:"Izdelava maket, sodelovanje pri natečajnih projektih in predstavitveni grafiki, risbe 2D in 3D."}},
+ {when:"2023 – 2024",org:{en:"Student project in South Africa",de:"Studentenprojekt in Südafrika",sl:"Študentski projekt v Južni Afriki"},
+  what:{en:"Design 2023, construction 2024",de:"Planung 2023, Bau 2024",sl:"Načrtovanje 2023, gradnja 2024"},
+  text:{en:"Plans and details, 3D model and visualisation, exhibition, poster and brochure; construction on site with local materials (earth, timber and masonry) and practical site solutions.",
+        de:"Pläne und Details, 3D-Modell und Visualisierung, Ausstellung, Plakat und Broschüre; Mitarbeit auf der Baustelle mit lokalen Baumaterialien (Erdbau, Holz- und Mauerwerksbau) und praktische Baustellenlösungen.",
+        sl:"Načrti in detajli, 3D-model in vizualizacija, razstava, plakat in brošura; delo na gradbišču z lokalnimi materiali (zemlja, les in zidava) ter praktične rešitve na gradbišču."}},
+ {when:"04/2023 – 09/2023",org:"ING-ARH, inženiring in arhitektura",
+  what:{en:"Work experience",de:"Praktikum",sl:"Praksa"},
+  text:{en:"2D and 3D drawings.",de:"Planerstellung (2D/3D).",sl:"Risbe 2D in 3D."}}
+];
+const EDU=[
+ {when:"2018 – 2026",org:{en:"Faculty of Architecture, University of Ljubljana",de:"Fakultät für Architektur, Universität Ljubljana",sl:"Fakulteta za arhitekturo, Univerza v Ljubljani"},
+  text:{en:"Master of Science in Architecture, September 2026",de:"Master of Science in Architektur, September 2026",sl:"Magisterij arhitekture, september 2026"}},
+ {when:"2022 – 2023",org:{en:"Karlsruhe Institute of Technology (KIT), Germany",de:"Karlsruher Institut für Technologie (KIT), Deutschland",sl:"Tehnološki inštitut Karlsruhe (KIT), Nemčija"}},
+ {when:"2014 – 2018",org:{en:"Gimnazija Ledina, Ljubljana",de:"Gymnasium Ledina, Ljubljana",sl:"Gimnazija Ledina, Ljubljana"}}
+];
+const SKILLS={
+ en:[["CAD","AutoCAD, Archicad, Rhino"],["3D modelling","Archicad, Rhino, SketchUp"],["Rendering","5d Render, Lumion, Blender (basic)"],["Graphics","Adobe Photoshop, InDesign, Illustrator, Affinity"],["Prototyping","3D printing, preparing 3D print models"],["Languages","Slovenian (native), German (B2), English (B2)"]],
+ de:[["CAD","AutoCAD, Archicad, Rhino"],["3D-Modellierung","Archicad, Rhino, SketchUp"],["Rendering","5d Render, Lumion, Blender (Grundkenntnisse)"],["Grafik","Adobe Photoshop, InDesign, Illustrator, Affinity"],["Prototyping","3D-Druck, Erstellung und Aufbereitung von 3D-Druckmodellen"],["Sprachen","Slowenisch (Muttersprache), Deutsch (B2), Englisch (B2)"]],
+ sl:[["CAD","AutoCAD, Archicad, Rhino"],["3D-modeliranje","Archicad, Rhino, SketchUp"],["Upodabljanje","5d Render, Lumion, Blender (osnove)"],["Grafika","Adobe Photoshop, InDesign, Illustrator, Affinity"],["Prototipi","3D-tisk, priprava modelov za 3D-tisk"],["Jeziki","slovenščina (materni jezik), nemščina (B2), angleščina (B2)"]]
+};
+
+/* ================= PROJECTS (from portfolio PDF) ================= */
+const COVER_AR={"01-hero":1.589,"02-photo":1.589,"03-render":1.589,"04-model-facade":1.746,"05-render":0.742,"06-render":1.008,"07-model":1.589};
+const KIND={
+ masters:{en:"Master's thesis",de:"Masterarbeit",sl:"Magistrska naloga"},
+ built:{en:"Built project, hands-on studio",de:"Realisiertes Projekt, praxisorientiertes Studio",sl:"Izveden projekt, praktični atelje"},
+ comp3:{en:"Competition, 3rd prize",de:"Wettbewerb, 3. Preis",sl:"Natečaj, 3. nagrada"},
+ studio:{en:"Studio project",de:"Studienprojekt",sl:"Študijski projekt"},
+ studentcomp:{en:"Student competition",de:"Studentischer Wettbewerb",sl:"Študentski natečaj"}
+};
+const projects=[
+ {id:"kamen",tags:["academic","landscape","interior"],kind:"masters",cover:"01-hero",
+  title:{en:"Research Centre for Alpine Rivers and the Revitalisation of Kamen Castle",de:"Forschungszentrum für alpine Fließgewässer und Revitalisierung der Burgruine Kamen",sl:"Raziskovalni center za alpske vodotoke in revitalizacija razvaline gradu Kamen"},
+  place:{en:"Begunje na Gorenjskem, Slovenia",de:"Begunje na Gorenjskem, Slowenien",sl:"Begunje na Gorenjskem, Slovenija"},
+  context:{en:"Faculty of Architecture, University of Ljubljana",de:"Fakultät für Architektur, Universität Ljubljana",sl:"Fakulteta za arhitekturo, Univerza v Ljubljani"},
+  text:{en:["Kamen Castle is a medieval ruin that grew over several phases and periods. It is open to the public but offers no coherent experience, and part of it is fenced off because of rockfall. The thesis analyses its current state and the conservation work carried out since the second half of the 20th century, and proposes stabilising the walls of the castle and its manor farm, new targeted interventions, and embedding a programme within the ruin.","On the terraces of two former farm buildings, a small research centre for analysing field samples from alpine rivers creates a new connection between the lower and upper parts of the ruin and improves access. The manor farm, once a mill, holds the entrance and a café. A park and an events area complete the revitalisation."],
+        de:["Die Burg Kamen ist eine mittelalterliche, über mehrere Phasen und Epochen gewachsene Ruine. Sie ist öffentlich zugänglich, bietet aber kein ganzheitliches Erlebnis, und ein Teil ist wegen Steinschlags umzäunt. Die Arbeit analysiert den Ist-Zustand und die konservatorisch-restauratorischen Eingriffe seit der zweiten Hälfte des 20. Jahrhunderts und schlägt die Stabilisierung der Mauern von Burg und Meierhof, neue punktuelle Interventionen und die Einbettung eines Programms in die Ruine vor.","Auf den Terrassen zweier ehemaliger Wirtschaftsgebäude liegt ein kleines Forschungszentrum zur Analyse von Feldproben alpiner Fließgewässer. Es schafft eine neue Verbindung zwischen dem unteren und dem oberen Teil der Ruine und verbessert ihre Zugänglichkeit. Im Meierhof, einst eine Mühle, befinden sich Eingang und Café. Eine Parkanlage und ein Veranstaltungsbereich ergänzen die Revitalisierung."],
+        sl:["Grad Kamen je srednjeveška razvalina, ki je rasla skozi več faz in obdobij. Javno je dostopna, vendar ne ponuja celostnega doživetja, del pa je zaradi padajočega kamenja ograjen. Naloga analizira obstoječe stanje in konservatorsko-restavratorske posege od druge polovice 20. stoletja ter predlaga utrditev zidov gradu in pristave, nove točkovne posege in umestitev programa v prostor razvaline.","Na terasah dveh nekdanjih gospodarskih poslopij stoji manjši raziskovalni center za analizo terenskih vzorcev alpskih vodotokov. Ustvarja novo povezavo med spodnjim in zgornjim delom razvaline in izboljšuje njeno dostopnost. V pristavi, kjer je bil nekoč mlin, sta vhod in kavarna. Park in prireditveni prostor dopolnjujeta revitalizacijo."]},
+  images:[["01-hero",{en:"Visualisation of the approach",de:"Visualisierung des Zugangs",sl:"Vizualizacija dostopa"}],
+          ["01-site",{en:"Site plan and ground floor, 1:500",de:"Lageplan und EG, M 1:500",sl:"Situacija in pritličje, M 1:500"}],
+          ["01-elevation",{en:"South elevation, 1:250",de:"Ansicht Süd, M 1:250",sl:"Južna fasada, M 1:250"}],
+          ["01-cafe",{en:"Café in the manor farm",de:"Café im Burgmeierhof",sl:"Kavarna v grajski pristavi"}],
+          ["01-model",{en:"Model",de:"Modell",sl:"Maketa"}]]},
+ {id:"thlagong",tags:["built","landscape"],kind:"built",cover:"02-photo",
+  title:{en:"Thlagong",de:"Thlagong",sl:"Thlagong"},
+  sub:{en:"Waterberg Biosphere Interactive Centre",de:"Interaktives Zentrum im Waterberg-Biosphärenreservat",sl:"Interaktivni center v biosfernem rezervatu Waterberg"},
+  place:{en:"Rantlakane, South Africa",de:"Rantlakane, Südafrika",sl:"Rantlakane, Južna Afrika"},
+  year:{en:"Design 2022/2023, construction January to April 2024",de:"Entwurf 2022/2023, Bau Januar bis April 2024",sl:"Zasnova 2022/2023, gradnja od januarja do aprila 2024"},
+  context:{en:"Faculty of Architecture, University of Ljubljana",de:"Fakultät für Architektur, Universität Ljubljana",sl:"Fakulteta za arhitekturo, Univerza v Ljubljani"},
+  mentors:"Prof. Anja Planišček, MA; Assoc. Prof. Gašper Medvešek; Assoc. Prof. Tomaž Slak, PhD; Assist. Primož Žitnik; Assist. Mina Hiršman; Teaching Assoc. Tadej Bolta; Teaching Assoc. Samo Kralj",
+  text:{en:["In the academic year 2022/2023, the Interactive Centre in the Waterberg Biosphere Reserve was designed as part of a hands-on architectural studio. It was built between January and April 2024 by students of the Faculty of Architecture, University of Ljubljana.","The project creates a community hub where local residents can gather, learn about the environment and move towards sustainable practices. The centre provides space for education, biodiversity awareness and local empowerment, and connects the stakeholders of the Waterberg District with the community directly affected by the project."],
+        de:["Das interaktive Zentrum im Waterberg-Biosphärenreservat wurde im Studienjahr 2022/2023 in einem praxisorientierten Entwurfsstudio entworfen und von Januar bis April 2024 von Studierenden der Fakultät für Architektur der Universität Ljubljana gebaut.","Das Projekt schafft einen Treffpunkt, an dem die lokale Bevölkerung zusammenkommt, mehr über die Umwelt erfährt und den Wandel zu nachhaltigen Praktiken gestaltet. Das Zentrum bietet Raum für Bildung, Bewusstsein für Biodiversität und die Stärkung der lokalen Gemeinschaft und verbindet die Akteure im Waterberg-Distrikt mit der direkt betroffenen Gemeinde."],
+        sl:["Interaktivni center v biosfernem rezervatu Waterberg je bil zasnovan v študijskem letu 2022/2023 v praktično usmerjenem arhitekturnem ateljeju, med januarjem in aprilom 2024 pa so ga zgradili študenti Fakultete za arhitekturo Univerze v Ljubljani.","Projekt ustvarja skupnostno središče, kjer se domačini zbirajo, spoznavajo okolje in prehajajo k trajnostnim praksam. Center ponuja prostor za izobraževanje, ozaveščanje o biotski raznovrstnosti in krepitev lokalne skupnosti ter povezuje deležnike v okrožju Waterberg s skupnostjo, ki jo projekt neposredno zadeva."]},
+  role:{en:"Plans and details, 3D model and visualisation, exhibition, poster and brochure; construction on site with local materials (earth, timber and masonry).",de:"Pläne und Details, 3D-Modell und Visualisierung, Ausstellung, Plakat und Broschüre; Mitarbeit auf der Baustelle mit lokalen Baumaterialien (Erdbau, Holz- und Mauerwerksbau).",sl:"Načrti in detajli, 3D-model in vizualizacija, razstava, plakat in brošura; delo na gradbišču z lokalnimi materiali (zemlja, les in zidava)."},
+  credits:{en:"Students: Lenart Berdon, Tea Berljavac, Neža Branković, Sima Bučar, Rok Dobrilović, Valentin Dowhyj, Pia Gerbec, Aljaž Gradišar, Ela Grasselli, Hana Kifle, Julia Koželj, Ela Irena Leskošek, Žan Majetić, Martin Mušič, Ana Pečnik, Filip Perušić, Tanja Pfajfar, Daša Pintarič, Tina Ražem, Neža Rejc, Tine Robič, Anja Rudof, Ana Marija Snoj, Tilen Šmid, Sinja Tekavec, Luka Tomažič, Urša Uhan, Klara Suša Vačovnik, Lea Elena Vidmar, Špela Zakrajšek, Tamara Zalokar, Saša Alekseja Zepan, Blaž Zupančič, Ajda Žagar",de:"Studierende: Lenart Berdon, Tea Berljavac, Neža Branković, Sima Bučar, Rok Dobrilović, Valentin Dowhyj, Pia Gerbec, Aljaž Gradišar, Ela Grasselli, Hana Kifle, Julia Koželj, Ela Irena Leskošek, Žan Majetić, Martin Mušič, Ana Pečnik, Filip Perušić, Tanja Pfajfar, Daša Pintarič, Tina Ražem, Neža Rejc, Tine Robič, Anja Rudof, Ana Marija Snoj, Tilen Šmid, Sinja Tekavec, Luka Tomažič, Urša Uhan, Klara Suša Vačovnik, Lea Elena Vidmar, Špela Zakrajšek, Tamara Zalokar, Saša Alekseja Zepan, Blaž Zupančič, Ajda Žagar",sl:"Študenti: Lenart Berdon, Tea Berljavac, Neža Branković, Sima Bučar, Rok Dobrilović, Valentin Dowhyj, Pia Gerbec, Aljaž Gradišar, Ela Grasselli, Hana Kifle, Julia Koželj, Ela Irena Leskošek, Žan Majetić, Martin Mušič, Ana Pečnik, Filip Perušić, Tanja Pfajfar, Daša Pintarič, Tina Ražem, Neža Rejc, Tine Robič, Anja Rudof, Ana Marija Snoj, Tilen Šmid, Sinja Tekavec, Luka Tomažič, Urša Uhan, Klara Suša Vačovnik, Lea Elena Vidmar, Špela Zakrajšek, Tamara Zalokar, Saša Alekseja Zepan, Blaž Zupančič, Ajda Žagar"},
+  images:[["02-photo",{en:"The completed centre",de:"Das fertiggestellte Zentrum",sl:"Dokončan center"}],
+          ["02-render",{en:"Visualisation",de:"Visualisierung",sl:"Vizualizacija"}],
+          ["02-team",{en:"The team on site",de:"Das Team vor Ort",sl:"Ekipa na terenu"}],
+          ["02-landscape",{en:"Site plan with tree planting spots, biodiversity islands and buffer zones",de:"Lageplan mit Baumstandorten, Biodiversitätsinseln und Pufferzonen",sl:"Situacija z mesti za sajenje dreves, otoki biotske raznovrstnosti in varovalnimi pasovi"}],
+          ["02-details",{en:"Construction details: crossbeams and beam joint on the brick wall",de:"Konstruktionsdetails: Querträger und Balkenauflager auf der Ziegelwand",sl:"Konstrukcijski detajli: prečni nosilci in stik nosilca z opečnim zidom"}]]},
+ {id:"allhartsberg",tags:["competition"],kind:"comp3",cover:"03-render",
+  title:{en:"Regionalstandort Allhartsberg",de:"Regionalstandort Allhartsberg",sl:"Regionalstandort Allhartsberg"},
+  place:{en:"Allhartsberg, Austria",de:"Allhartsberg, Österreich",sl:"Allhartsberg, Avstrija"},yearPlain:"2024",
+  context:{en:"Internship at Juri Troy Architects",de:"Praktikum bei Juri Troy Architects",sl:"Praksa v biroju Juri Troy Architects"},
+  text:{en:["Contribution to the competition entry by Juri Troy Architects and MAGK Architekten, awarded 3rd prize, as part of an internship. Published in wa wettbewerbe aktuell, 2024."],
+        de:["Beitrag zum mit dem 3. Preis ausgezeichneten Wettbewerbsentwurf von Juri Troy Architects und MAGK Architekten im Rahmen eines Praktikums. Veröffentlicht in wa wettbewerbe aktuell, 2024."],
+        sl:["Sodelovanje pri natečajnem projektu birojev Juri Troy Architects in MAGK Architekten, nagrajenem s 3. nagrado, v okviru prakse. Objavljeno v reviji wa wettbewerbe aktuell, 2024."]},
+  role:{en:"Concept and design diagrams of the urban and functional idea; layout and graphic design of the competition boards; section and facade drawings.",de:"Konzept- und Entwurfsdiagramme zur städtebaulichen und funktionalen Grundidee; Layout und grafische Ausarbeitung der Wettbewerbsplakate; Schnitt- und Fassadenzeichnungen.",sl:"Konceptni in projektni diagrami urbanistične in funkcionalne zasnove; postavitev in grafično oblikovanje natečajnih plakatov; prerezi in fasade."},
+  credits:{en:"Juri Troy Architects, Wien; MAGK Architekten Aichholzer/Klein, Wien. Team: Georg Marterer, Michael Egger, Martina Berlinger, Moritz Gaugg, Ezgl Özgan, Tamara Zalokar. Structural engineering: Kraftfluss Bauengineering KG, Grafenwörth. Building services: Team GMI Ingenieurbüro GmbH, Wien. Landscape architecture: Outside Landschaftsarchitektur, Wien. Site management and costing: m2 Architekten, Neudorf. Model: Design & Funktion, Harry Schmidt, Wien. Visualisation: Visarteam / Juri Troy ZT GmbH.",de:"Juri Troy Architects, Wien; MAGK Architekten Aichholzer/Klein, Wien. Mitarbeit: Georg Marterer, Michael Egger, Martina Berlinger, Moritz Gaugg, Ezgl Özgan, Tamara Zalokar. Tragwerksplanung: Kraftfluss Bauengineering KG, Grafenwörth. TGA: Team GMI Ingenieurbüro GmbH, Wien. Freiraumplanung: Outside Landschaftsarchitektur, Wien. Bauführung / Kalkulation: m2 Architekten, Neudorf. Modellbau: Design & Funktion, Harry Schmidt, Wien. Visualisierung: Visarteam / Juri Troy ZT GmbH.",sl:"Juri Troy Architects, Wien; MAGK Architekten Aichholzer/Klein, Wien. Ekipa: Georg Marterer, Michael Egger, Martina Berlinger, Moritz Gaugg, Ezgl Özgan, Tamara Zalokar. Statika: Kraftfluss Bauengineering KG, Grafenwörth. Strojne in elektro instalacije: Team GMI Ingenieurbüro GmbH, Wien. Krajinska arhitektura: Outside Landschaftsarchitektur, Wien. Vodenje gradnje in kalkulacija: m2 Architekten, Neudorf. Maketa: Design & Funktion, Harry Schmidt, Wien. Vizualizacija: Visarteam / Juri Troy ZT GmbH."},
+  images:[["03-render",{en:"Visualisation: Visarteam / Juri Troy ZT GmbH (wa wettbewerbe aktuell, 2024)",de:"Visualisierung: Visarteam / Juri Troy ZT GmbH (wa wettbewerbe aktuell, 2024)",sl:"Vizualizacija: Visarteam / Juri Troy ZT GmbH (wa wettbewerbe aktuell, 2024)"}]]},
+ {id:"luzern",tags:["academic"],kind:"studio",cover:"04-model-facade",
+  title:{en:"Hotel in Lucerne",de:"Hotel in Luzern",sl:"Hotel v Luzernu"},
+  place:{en:"Lucerne, Switzerland",de:"Luzern, Schweiz",sl:"Luzern, Švica"},yearPlain:"2022/2023",
+  context:{en:"Studio Meinrad Morger",de:"Studio Meinrad Morger",sl:"Atelje Meinrad Morger"},
+  text:{en:["Lucerne lies on Lake Lucerne close to the Alps, and the main station is where most visitors arrive. Water is the core of the concept: it divides the city, while bridges connect it. Water guides visitors to the main entrance in the central gap between the buildings.","On the outer grid, new water columns supply fresh water and grey water and carry waste water down to the basement, where it is filtered and grey water is recovered. Bathrooms always sit at these columns, together with the entrance to each room. The structure follows a 4.98 × 4.98 m grid, ramps link the hotel with neighbouring buildings, and the water column on the south side also carries the facade greenery."],
+        de:["Luzern liegt am Vierwaldstättersee in der Nähe der Alpen, der Hauptbahnhof ist der wichtigste Ankunftsort für Gäste. Hauptelement des Konzepts ist das Wasser: Es teilt die Stadt, die Brücken verbinden sie. Das Wasser führt die Besucher zum Haupteingang im mittleren Zwischenraum.","Am äußeren Raster stehen neue Wasserstützen, die Frisch- und Grauwasser zuführen und Schmutzwasser ins Untergeschoss leiten, wo es gefiltert und Grauwasser gewonnen wird. Bad und WC liegen immer an diesen Stützen, zusammen mit dem Zimmereingang. Das Tragwerk folgt einem Raster von 4,98 × 4,98 m, Rampen verbinden das Hotel mit den Nachbargebäuden, und die Wasserstütze an der Südseite dient auch der Begrünung der Fassade."],
+        sl:["Luzern leži ob Štirikantonskem jezeru blizu Alp, glavna železniška postaja pa je osrednja točka prihoda obiskovalcev. Glavni element zasnove je voda: mesto deli, mostovi pa ga povezujejo. Voda vodi obiskovalce do glavnega vhoda v osrednjem vmesnem prostoru.","Na zunanjem rastru stojijo novi vodni stebri, ki dovajajo svežo in sivo vodo ter odvajajo odpadno vodo v klet, kjer se filtrira in pridobiva siva voda. Kopalnice so vedno ob teh stebrih, skupaj z vhodom v sobo. Konstrukcija sledi rastru 4,98 × 4,98 m, rampe povezujejo hotel s sosednjimi stavbami, vodni steber na južni strani pa nosi tudi ozelenitev fasade."]},
+  images:[["04-model-facade",{en:"Working model: street facade",de:"Arbeitsmodell: Straßenfassade",sl:"Delovna maketa: ulična fasada"}],
+          ["04-site",{en:"Site plan, 1:500",de:"Lageplan, M 1:500",sl:"Situacija, M 1:500"}],
+          ["04-model-court",{en:"Working model: view into the courtyard",de:"Arbeitsmodell: Blick in den Innenhof",sl:"Delovna maketa: pogled na notranje dvorišče"}]]},
+ {id:"erde",tags:["competition"],kind:"studentcomp",cover:"05-render",
+  title:{en:"Between Earth and Sky",de:"Zwischen Erde und Himmel",sl:"Med zemljo in nebom"},
+  team:"Tamara Zalokar, Blaž Zupančič",
+  text:{en:["Student architecture competition entry, developed together with Blaž Zupančič."],de:["Studentischer Architekturwettbewerb, in Zusammenarbeit mit Blaž Zupančič."],sl:["Študentski arhitekturni natečaj, v sodelovanju z Blažem Zupančičem."]},
+  images:[["05-render",{en:"Visualisation",de:"Visualisierung",sl:"Vizualizacija"}],
+          ["05-plan",{en:"Site plan, 1:500, with plans and sections",de:"Lageplan, M 1:500, mit Grundrissen und Schnitten",sl:"Situacija, M 1:500, s tlorisi in prerezi"}]]},
+ {id:"sestica",tags:["academic"],kind:"studio",cover:"06-render",
+  title:{en:"The New Chapter: City Library in the Šestica Block",de:"Das neue Kapitel: Die Stadtbibliothek im Karree Šestica",sl:"Novo poglavje: Mestna knjižnica v kareju Šestica"},
+  place:{en:"Ljubljana, Slovenia",de:"Ljubljana, Slowenien",sl:"Ljubljana, Slovenija"},yearPlain:"2020/2021",
+  context:{en:"Studio Rok Žnidaršič",de:"Studio Rok Žnidaršič",sl:"Atelje Rok Žnidaršič"},
+  text:{en:["The scenario develops a new spatial order after a potential earthquake in the Šestica block in central Ljubljana, between Slovenska and Nazorjeva streets. The listed facades on Slovenska Street, of the Šestica inn, the house of the former Piccoli pharmacy and the Cocconi Palace, are replicated and shifted inwards to form new outdoor atria.","Each atrium has its own purpose: an exhibition atrium on Nazorjeva Street, an atrium with café and bookshop, and a public courtyard facing the Nebotičnik. Together they link the historic elements with an expanded city library, with 12,000 m² for books and 3,000 m² for activities, conceived as a multifunctional cultural centre."],
+        de:["Das Szenario entwickelt nach einem möglichen Erdbeben eine neue räumliche Ordnung im Karree Šestica im Zentrum Ljubljanas, zwischen Slovenska- und Nazorjeva-Straße. Die denkmalgeschützten Fassaden an der Slovenska-Straße, des Wirtshauses Šestica, des Hauses der ehemaligen Piccoli-Apotheke und des Cocconi-Palasts, werden als Repliken nach innen versetzt und bilden neue Außenatrien.","Jedes Atrium hat einen eigenen Zweck: ein Atrium mit Ausstellungscharakter an der Nazorjeva-Straße, ein Atrium mit Kaffeehaus und Buchhandlung sowie ein öffentlicher Hof gegenüber dem Nebotičnik. Gemeinsam verbinden sie die historischen Elemente mit einer erweiterten Stadtbibliothek mit 12.000 m² für Bücher und 3.000 m² für Aktivitäten, als multifunktionales Kulturzentrum."],
+        sl:["Scenarij po morebitnem potresu razvije nov prostorski red v kareju Šestica v središču Ljubljane, med Slovensko in Nazorjevo ulico. Zaščitene fasade ob Slovenski cesti, gostilne Šestica, hiše nekdanje lekarne Piccoli in Cocconijeve palače, so kot replike zamaknjene navznoter in tvorijo nove zunanje atrije.","Vsak atrij ima svoj namen: atrij z razstavnim značajem ob Nazorjevi ulici, atrij s kavarno in knjigarno ter javno dvorišče nasproti Nebotičnika. Skupaj povezujejo zgodovinske elemente z razširjeno mestno knjižnico z 12.000 m² za knjige in 3.000 m² za dejavnosti, zasnovano kot večnamensko kulturno središče."]},
+  images:[["06-render",{en:"Visualisation of an atrium",de:"Visualisierung eines Atriums",sl:"Vizualizacija atrija"}],
+          ["06-site",{en:"Site plan, 1:1000",de:"Lageplan, M 1:1000",sl:"Situacija, M 1:1000"}],
+          ["06-elevations",{en:"West elevation, 1:1000",de:"Ansicht West, M 1:1000",sl:"Zahodna fasada, M 1:1000"}]]},
+ {id:"roof",tags:["academic","landscape"],kind:"studio",cover:"07-model",
+  title:{en:"A Roof for the World Ecology Congress 2026",de:"Das Dach für den Weltökologiekongress 2026",sl:"Streha za svetovni ekološki kongres 2026"},
+  place:{en:"Rakova Jelša, Ljubljana, Slovenia",de:"Rakova Jelša, Ljubljana, Slowenien",sl:"Rakova Jelša, Ljubljana, Slovenija"},yearPlain:"2020/2021",
+  context:{en:"Architectural Design 3 and Construction 2",de:"Architektonisches Entwerfen 3 und Konstruktion 2",sl:"Arhitekturno oblikovanje 3 in Konstrukcije 2"},
+  team:"Lucija Ritoša, Tamara Zalokar, Saša Alekseja Zepan",
+  text:{en:["The site lies in a wetland near Rakova Jelša, where an existing path leads into an untouched area in which trees form covered and open, larger and smaller spaces. A monumental rammed-earth wall invites visitors in and leads them to the central covered space, which serves as an auditorium. The walls follow the existing lines of the ground and define more and less intimate spaces between the trees.","The roof, made of cardboard tubes and wax paper in a steel frame, keeps its distance from the walls so that it seems to float, and lets dappled light through. Natural and recycled materials were chosen throughout. After the congress, the roof is taken away and recycled. Only the footprint of the walls remains, slowly washed back into the ground by the rain."],
+        de:["Das Grundstück liegt in einem Feuchtgebiet bei Rakova Jelša. Ein bestehender Weg führt in ein unberührtes Gebiet, in dem Bäume gedeckte und ungedeckte, größere und kleinere Räume bilden. Eine monumentale Stampflehmmauer lädt ein und führt zum zentralen überdachten Raum, der als Auditorium dient. Die Wände folgen den vorhandenen Bodenlinien und definieren zwischen den Bäumen intime und weniger intime Räume.","Das Dach aus Papphülsen und Wachspapier in einem Stahlrahmen hält Abstand zu den Wänden, wirkt dadurch schwebend und lässt gefiltertes Licht durch. Es wurden vorwiegend natürliche und recycelte Materialien gewählt. Nach dem Kongress wird das Dach abtransportiert und wiederverwertet. Nur der Fußabdruck der Wände bleibt zurück und wird vom Regen langsam in den Boden zurückgespült."],
+        sl:["Zemljišče leži na mokrišču pri Rakovi Jelši, kjer obstoječa pot vodi v nedotaknjeno območje, v katerem drevesa tvorijo pokrite in odprte, večje in manjše prostore. Monumentalni zid iz nabite zemlje vabi obiskovalce in jih vodi do osrednjega pokritega prostora, ki služi kot avditorij. Zidovi sledijo obstoječim linijam terena in med drevesi oblikujejo bolj in manj intimne prostore.","Streha iz kartonskih tulcev in voščenega papirja v jekleni konstrukciji se ne dotika zidov, zato deluje lebdeče, in prepušča razpršeno svetlobo. Izbrani so bili predvsem naravni in reciklirani materiali. Po kongresu streho odstranijo in reciklirajo. Ostane le odtis zidov, ki ga dež počasi spere nazaj v zemljo."]},
+  images:[["07-model",{en:"Model",de:"Modell",sl:"Maketa"}],
+          ["07-render-roof",{en:"Visualisation: under the roof",de:"Visualisierung: unter dem Dach",sl:"Vizualizacija: pod streho"}],
+          ["07-render-wall",{en:"Visualisation: along the rammed-earth wall",de:"Visualisierung: entlang der Stampflehmmauer",sl:"Vizualizacija: ob zidu iz nabite zemlje"}]]}
+];
+
+
+/* ================= Hero line drawing ================= */
+const sR=(x,y,w,h,c="")=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" class="${c}" pathLength="1"/>`;
+const sL=(a,b,c,d,k="")=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" class="${k}" pathLength="1"/>`;
+const sP=(p,c="")=>`<polyline points="${p}" class="${c}" pathLength="1"/>`;
+const sC=(x,y,r,c="")=>`<circle cx="${x}" cy="${y}" r="${r}" class="${c}" pathLength="1"/>`;
+const sD=(d,c="")=>`<path d="${d}" class="${c}" pathLength="1"/>`;
+const tree=(x,h=26,r=13)=>sL(x,230,x,230-h,"thin")+sC(x,230-h-r+4,r,"thin");
+function skyline(){
+  let s="";
+  // Kamen Castle: rocky spur with tower and palas walls, research centre on two terraces, manor farm at the foot
+  s+=sP("4,230 18,229 28,224 36,216 42,208 46,198 52,192 54,182 60,174 62,164 68,158 70,148 76,142 80,134 86,130 92,127 152,125 160,126 166,127 170,130 172,138 172,146 210,146 212,154 213,162 214,168 242,168 245,176 247,186 250,196 251,206 254,216 255,230");
+  [[50,200,56,192],[58,184,62,176],[64,166,68,160],[72,150,76,144],[82,136,86,132],[40,214,46,206],[30,224,36,218],[94,132,90,140],[104,130,98,138],[60,196,64,204],[70,180,72,190],[244,182,246,192],[247,204,249,214],[212,156,213,164],[176,150,180,156],[190,150,186,158],[220,172,224,178],[232,172,230,180],[120,130,116,138],[140,130,144,138]].forEach(([a,b,c,d])=>s+=sL(a,b,c,d,"thin"));
+  s+=sP("98,126 98,44 102,40 106,44 110,36 116,42 120,38 124,44 124,126");
+  for(let y=56;y<118;y+=18) s+=sR(108,y,5,10,"thin");
+  s+=sL(98,64,124,64,"thin");
+  s+=sP("124,125 124,86 130,80 134,88 140,82 146,92 150,88 150,125");
+  s+=sP("150,125 150,100 156,94 160,102 166,98 166,127");
+  s+=sR(132,98,6,8,"thin")+sR(156,108,5,7,"thin");
+  // research centre: upper volume with slatted cladding and a deep recess
+  s+=sR(172,122,38,24,"clad")+sR(170,120,42,2,"solid");
+  for(let x=175;x<196;x+=3) s+=sL(x,123,x,146,"thin");
+  s+=sR(196,128,11,18,"solid");
+  for(let x=199;x<207;x+=3) s+=sL(x,123,x,127,"thin");
+  // remaining walls of the former farm buildings below the volumes
+  s+=sR(174,146,34,7,"thin");for(let x=180;x<208;x+=7) s+=sL(x,146,x,153,"thin");
+  s+=sR(216,168,24,6,"thin");for(let x=222;x<240;x+=7) s+=sL(x,168,x,174,"thin");
+  // lower volume
+  s+=sR(214,150,28,18,"clad")+sR(212,148,32,2,"solid");
+  for(let x=217;x<242;x+=3) s+=sL(x,151,x,168,"thin");
+  s+=sR(218,156,8,12,"solid");
+  // bridges: from the palas wall to the upper volume, and a stair down to the lower terrace
+  s+=sL(166,130,172,130)+sL(166,134,172,134,"thin");
+  s+=sP("210,134 214,134 214,142 218,142 218,148","thin");
+  // manor farm (Meierhof) with corner tower
+  s+=sR(270,182,52,48,"fill")+sR(256,170,16,60)+sP("256,170 256,164 260,164 260,170 264,170 264,164 268,164 268,170 272,170");
+  for(let y=192;y<224;y+=14)for(let x=278;x<318;x+=12) s+=sR(x,y,5,7,"thin");
+  s+=sR(260,206,8,12,"thin")+sP("268,182 296,174 324,182","thin");
+  const fir=(x,b,h)=>sP(`${x-h*.35},${b} ${x},${b-h} ${x+h*.35},${b}`,"thin")+sL(x,b,x,b+4,"thin");
+  s+=fir(30,226,16)+fir(42,222,20)+fir(234,226,14)+fir(338,226,14);
+  s+=`<g transform="translate(30,0)">`;
+  // Ljubljana Castle on the wooded Castle Hill, with the funicular
+  s+=sD("M300 230 C326 228 340 222 352 212 C366 200 376 186 390 176 C402 168 412 164 424 162 L520 160 C532 161 542 166 552 174 C566 186 580 204 596 218 C606 226 618 229 640 230");
+  s+=sD("M330 222 q5 -7 10 -1 q5 -8 11 -2","thin")+sD("M356 208 q6 -8 12 -2 q6 -9 13 -3 q5 -9 12 -4","thin")+sD("M392 182 q5 -6 10 0 q5 -6 10 1","thin")+sD("M586 214 q5 -6 10 0 q5 -6 10 2","thin")+sD("M532 168 q7 -6 12 1 q6 -6 12 2 q6 -4 10 4","thin")+sD("M568 198 q6 -6 11 1 q5 -5 10 3","thin");
+  s+=sL(372,222,436,162,"thin")+sL(376,222,440,162,"thin")+sR(398,196,12,8,"fill");
+  s+=sP("424,162 424,140 430,140 430,134 436,134 436,140 442,140 442,162");
+  s+=sR(444,128,74,32,"fill")+sP("440,128 448,118 514,118 522,128");
+  for(let x=452;x<512;x+=10) s+=sR(x,136,4,7,"thin");
+  for(let x=452;x<512;x+=10) s+=sR(x,148,4,6,"thin");
+  s+=sR(462,70,18,48)+sP("460,70 460,62 464,62 464,66 468,66 468,62 472,62 472,66 476,66 476,62 480,62 480,66 482,66 482,70");
+  s+=sL(471,62,471,44,"thin")+sP("471,44 482,48 471,52","thin");
+  for(let y=80;y<114;y+=12) s+=sR(469,y,4,7,"thin");
+  s+=sP("518,160 518,124 524,116 530,124 530,160")+sR(522,132,4,7,"thin");
+  s+=sP("444,160 444,166 518,166 518,160","thin");
+  s+=`</g><g transform="translate(210,0)">`;
+  // Nebotičnik
+  s+=sR(470,96,56,134)+sR(478,80,40,16)+sR(487,66,22,14)+sL(498,66,498,44)+sC(498,42,2.5);
+  for(let y=106;y<226;y+=11) s+=sL(470,y,526,y,"thin");
+  [484,498,512].forEach(x=>s+=sL(x,96,x,230,"thin"));
+  s+=tree(452,22,11)+tree(550,26,13);
+  // Thlagong
+  s+=sP("572,182 806,176")+sP("676,160 806,154");
+  [690,730,770].forEach(x=>s+=sL(x,159,x,177,"thin"));
+  s+=sR(582,186,214,44,"fill");
+  [[598,640],[656,698],[714,756]].forEach(([a,b])=>{s+=sR(a,192,b-a,38);for(let y=197;y<226;y+=7)for(let x=a+5;x<b-3;x+=8)s+=sL(x,y,x+3,y,"thin")});
+  s+=sR(764,196,22,34,"thin");
+  for(let x=590;x<806;x+=24) s+=sL(x,180,x,186,"thin");
+  // Karlsruhe: Pyramid and Palace
+  s+=sP("836,222 860,176 884,222")+sR(830,222,60,8);
+  s+=sR(910,172,74,58)+sR(1064,172,74,58)+sP("906,172 918,160 976,160 988,172")+sP("1060,172 1072,160 1130,160 1142,172");
+  s+=sR(984,140,80,90)+sP("998,140 1024,126 1050,140")+sR(1009,96,30,30)+sR(1015,76,18,20)+sP("1013,76 1024,62 1035,76")+sL(1024,62,1024,48)+sC(1024,46,2.5);
+  for(let x=918;x<984;x+=12)s+=sR(x,186,5,10,"thin");
+  for(let x=1072;x<1136;x+=12)s+=sR(x,186,5,10,"thin");
+  [994,1008,1022,1036,1050].forEach(x=>s+=sR(x,160,6,14,"thin"));
+  s+=sR(1014,200,20,30,"thin");
+  s+=tree(1160,24,12);
+  // Riesenrad
+  const cx=1240,cy=128,r=74;
+  s+=sC(cx,cy,r)+sC(cx,cy,66,"thin")+sC(cx,cy,6);
+  for(let i=0;i<15;i++){const a=i/15*Math.PI*2,x=cx+Math.cos(a)*r,y=cy+Math.sin(a)*r;s+=sL(cx,cy,cx+Math.cos(a)*66,cy+Math.sin(a)*66,"thin")+sR(x-4,y,8,9,"fill")}
+  s+=sL(cx,cy,1200,230)+sL(cx,cy,1280,230)+sR(1190,214,100,16,"fill");
+  // Stephansdom
+  s+=sR(1362,150,168,80)+sP("1362,150 1386,96 1506,96 1530,150");
+  for(let i=0;i<7;i++){const x=1392+i*17;s+=sP(`${x},102 ${x+8},112 ${x+16},102`,"thin");s+=sP(`${x-4},122 ${x+6},132 ${x+16},122`,"thin")}
+  for(let x=1378;x<1520;x+=22) s+=sD(`M${x} 230 V192 Q${x+6} 182 ${x+12} 192 V230`,"thin");
+  s+=sR(1330,128,30,102)+sP("1330,128 1345,108 1360,128")+sR(1338,150,14,26,"thin");
+  s+=sP("1534,230 1534,126 1542,96 1548,62 1553,30 1556,8 1559,30 1564,62 1570,96 1578,126 1578,230");
+  for(let y=142;y<220;y+=26) s+=sR(1550,y,8,16,"thin");
+  s+=sL(1543,96,1569,96,"thin")+sL(1548,62,1564,62,"thin");
+  s+=`</g>`;
+  s+=sL(0,230,1810,230);
+  return s;
+}
+(()=>{const el=document.getElementById("heroDrawing");
+  el.innerHTML=`<svg class="dwg" viewBox="0 0 1810 236" preserveAspectRatio="xMidYMax meet" aria-hidden="true">${skyline()}</svg>`;
+  el.querySelectorAll(".dwg *").forEach((n,i)=>n.style.setProperty("--i",i));})();
+
+
+/* ================= Contact details, protected from simple harvesters =================
+   The address and number never appear as plain text in the page source. They are decoded
+   and inserted only in a real browser, once the contact area or legal notice is shown. */
+const CT=(()=>{const k=[146, 156, 33, 128, 72, 126, 70, 98, 225],d=a=>a.map((c,i)=>String.fromCharCode(c^k[i%k.length])).join("");
+  return{mail:()=>d([250, 249, 77, 236, 39])+String.fromCharCode(64)+d([230, 253, 76, 225, 58, 31, 107, 24, 128, 254, 243, 74, 225, 58, 80, 35, 23]),
+          tel:()=>d([185, 175, 25, 182, 123, 79, 112, 82, 215, 171, 171, 18]),
+          telShow:()=>d([185, 175, 25, 182, 104, 77, 119, 66, 215, 162, 170, 1, 185, 127, 77]),
+          street:()=>d([196, 249, 83, 239, 38, 23, 45, 3, 134, 243, 239, 82, 229, 104, 74]),
+          city:()=>d([163, 173, 22, 176, 104, 41, 47, 7, 143])};})();
+function revealContact(root=document){
+  root.querySelectorAll("[data-reveal]").forEach(el=>{
+    if(el.dataset.done)return;el.dataset.done="1";
+    const kind=el.dataset.reveal;
+    if(kind==="email"){el.textContent=CT.mail();el.addEventListener("pointerdown",()=>el.href="mai"+"lto:"+CT.mail());el.addEventListener("focus",()=>el.href="mai"+"lto:"+CT.mail());el.addEventListener("click",()=>{el.href="mai"+"lto:"+CT.mail();});}
+    else if(kind==="phone"){el.textContent=CT.telShow();const go=()=>el.href="te"+"l:"+CT.tel();["pointerdown","focus","click"].forEach(ev=>el.addEventListener(ev,go));}
+    else if(kind==="contact"){el.textContent=CT.mail()+", "+CT.telShow();}
+    else if(kind==="street"){el.textContent=CT.street();}
+    else if(kind==="city"){el.textContent=CT.city();}
+    else if(kind==="address"){el.textContent=CT.street()+", "+CT.city();}
+  });
+}
+(()=>{const c=document.getElementById("contact");
+  const go=()=>revealContact(c);
+  if(window.IntersectionObserver){const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){go();io.disconnect();}},{rootMargin:"600px 0px"});io.observe(c);}else go();
+  addEventListener("hashchange",()=>{if(location.hash==="#contact")go();});
+  c.addEventListener("focusin",go);
+  const later=()=>setTimeout(go,1200);
+  if(document.readyState==="complete")later();else addEventListener("load",later);
+})();
+
+/* ================= Rendering ================= */
+/* Language on load: 1) ?lang= in the address (a shared link or an earlier choice),
+   2) the visitor's preferred languages in order (navigator.languages is the same list the
+   browser sends to servers in the Accept-Language header), 3) the browser/system language,
+   4) English. Regional variants and close relatives map to the nearest available language. */
+const NEAREST={de:"de",gsw:"de",bar:"de",lb:"de",sl:"sl",en:"en"};
+function pickLang(){
+  try{const q=(new URLSearchParams(location.search).get("lang")||"").toLowerCase();if(T[q])return q;}catch(e){}
+  const prefs=[...(navigator.languages||[]),navigator.language,navigator.userLanguage,navigator.browserLanguage].filter(Boolean);
+  for(const tag of prefs){const base=String(tag).toLowerCase().split(/[-_]/)[0];if(NEAREST[base])return NEAREST[base];}
+  return "en";
+}
+let lang=pickLang(),filter="all";
+const t=k=>T[lang][k];
+const L=v=>v==null?"":(typeof v==="string"?v:v[lang]);
+const IMG=k=>`images/${k}.jpg`;
+const grid=document.getElementById("grid"),count=document.getElementById("count");
+
+const coverAlt=p=>{const im=p.images.find(([k])=>k===p.cover);return `${L(p.title)}: ${im?L(im[1]):""}`.replace(/: $/,"")};
+const imgAlt=(p,c)=>`${L(p.title)}: ${L(c)}`;
+function renderGrid(){
+  const list=projects.filter(p=>filter==="all"||p.tags.includes(filter));
+  grid.innerHTML=list.map((p,i)=>{
+    const where=[L(p.place),p.yearPlain||""].filter(Boolean).join(", ");
+    const ar=COVER_AR[p.cover]||1.5;
+    return `<article class="card" data-ar="${ar}" data-id="${p.id}" style="view-transition-name:p-${p.id}">
+      <div class="plate"><img src="${IMG(p.cover)}" alt="${coverAlt(p)}" decoding="async"></div>
+      <div class="meta"><p class="kind">${L(KIND[p.kind])}</p><h3><button class="open" type="button" aria-haspopup="dialog">${L(p.title)}</button></h3>${where?`<p class="where">${where}</p>`:""}</div></article>`}).join("");
+  count.textContent=t("count")(list.length,projects.length);
+  grid.querySelectorAll(".card img").forEach(img=>img.addEventListener("load",()=>{const c=img.closest(".card"),r=img.naturalWidth/img.naturalHeight;if(r&&Math.abs(r-c.dataset.ar)>.01){c.dataset.ar=r;layoutGrid();}},{once:true}));
+  layoutGrid();
+}
+/* Justified rows: every image in a row gets the same height, widths follow each image's own proportions */
+function layoutGrid(){
+  const cards=[...grid.children];if(!cards.length)return;
+  const W=grid.clientWidth,gap=parseFloat(getComputedStyle(grid).columnGap)||0;
+  const H=W<700?W*.72:Math.min(380,Math.max(260,W*.29));
+  const set=(row,h)=>row.forEach(c=>{const w=Math.min(W,c._ar*h);c.style.width=w+"px";c.querySelector(".plate").style.height=(w/c._ar)+"px"});
+  let row=[],sum=0;
+  cards.forEach(c=>{
+    c._ar=parseFloat(c.dataset.ar)||1.5;
+    if(row.length&&(W-gap*row.length)/(sum+c._ar)<H*.82){set(row,Math.min((W-gap*(row.length-1))/sum,H*1.2));row=[];sum=0;}
+    row.push(c);sum+=c._ar;
+  });
+  if(row.length) set(row,Math.min((W-gap*(row.length-1))/sum,H));
+}
+if(window.ResizeObserver) new ResizeObserver(()=>layoutGrid()).observe(grid); else addEventListener("resize",layoutGrid);
+const dl=(el,rows)=>el.innerHTML=rows.map(([k,v])=>`<dt>${k}</dt><dd>${String(v).replace("{CONTACT}",'<span data-reveal="contact"></span>').replace("{ADDRESS}",'<span data-reveal="address"></span>')}</dd>`).join("");
+const tl=(el,rows)=>el.innerHTML=rows.map(r=>`<li><span class="when">${r.when}</span><div><b>${L(r.org)}</b>${r.what?`<span class="what">${L(r.what)}</span>`:""}${r.text?`<p>${L(r.text)}</p>`:""}</div></li>`).join("");
+
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.title=t("title");
+  try{const hasParam=new URLSearchParams(location.search).has("lang");document.querySelector('link[rel="canonical"]').href=hasParam?`https://tamara-zalokar.eu/?lang=${lang}`:"https://tamara-zalokar.eu/";}catch(e){}
+  document.querySelector('meta[name="description"]').content=t("desc");
+  document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=t(el.dataset.i18n));
+  document.querySelectorAll("[data-i18n-label]").forEach(el=>el.setAttribute("aria-label",t(el.dataset.i18nLabel)));
+  document.getElementById("heroDrawing").setAttribute("aria-label",t("heroCap"));
+  document.getElementById("heroImg").alt=t("imgCap");
+  document.getElementById("portrait").alt=t("portraitAlt");
+  document.getElementById("langs").setAttribute("aria-label",t("langLabel"));
+  const fl=document.getElementById("filters");fl.setAttribute("aria-label",t("filterLabel"));
+  fl.querySelectorAll("button").forEach(b=>b.textContent=t("f")[b.dataset.filter]);
+  document.querySelectorAll("#langs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang));
+  tl(document.getElementById("exp"),EXP);
+  tl(document.getElementById("edu"),EDU);
+  dl(document.getElementById("skills"),SKILLS[lang]);
+  dl(document.getElementById("impFacts"),t("imp"));
+  renderGrid();
+}
+applyLang();
+
+/* Language switch: the new language spreads as a ripple from the pressed button */
+document.querySelectorAll("#langs button").forEach(btn=>btn.addEventListener("click",()=>{
+  if(btn.dataset.lang===lang)return;
+  const swap=()=>{lang=btn.dataset.lang;applyLang();
+    try{const u=new URL(location.href);u.searchParams.set("lang",lang);history.replaceState(null,"",u);}catch(e){}};
+  const r=btn.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;
+  const R=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));
+  if(!document.startViewTransition||matchMedia("(prefers-reduced-motion: reduce)").matches){swap();return;}
+  const root=document.documentElement;root.classList.add("vt-lang");
+  const vt=document.startViewTransition(swap);
+  vt.ready.then(()=>{
+    const D=1700,EASE="cubic-bezier(.32,.12,.48,.98)";
+    const end=2*(R+60)/0.72;   // blob mask is ~40% of its box with some wobble, so it must grow past the screen corners
+    if(window.CSS&&CSS.registerProperty&&CSS.supports("mask-size","10px 10px")){
+      root.style.setProperty("--rx",x+"px");root.style.setProperty("--ry",y+"px");
+      root.animate({"--rr":["0px",end+"px"]},{duration:D,easing:EASE,pseudoElement:"::view-transition-new(root)",fill:"forwards"});
+    }else{
+      root.animate({clipPath:[`circle(0px at ${x}px ${y}px)`,`circle(${R}px at ${x}px ${y}px)`]},{duration:D,easing:EASE,pseudoElement:"::view-transition-new(root)"});
+    }
+    // one hand-drawn, slightly irregular ring travelling with the wavefront
+    const NS="http://www.w3.org/2000/svg",ring=document.createElementNS(NS,"svg");
+    ring.setAttribute("class","lang-ring");ring.setAttribute("viewBox","0 0 100 100");ring.setAttribute("aria-hidden","true");
+    const path=document.createElementNS(NS,"path");path.setAttribute("d","M93.32 50.00 C93.47 51.86 93.34 53.84 92.88 55.64 C92.41 57.45 91.49 59.24 90.51 60.86 C89.54 62.47 88.19 63.92 87.05 65.35 C85.90 66.77 84.68 68.04 83.63 69.42 C82.58 70.79 81.71 72.18 80.76 73.61 C79.82 75.03 79.02 76.59 77.97 77.97 C76.91 79.34 75.78 80.76 74.44 81.86 C73.10 82.95 71.52 83.84 69.93 84.51 C68.33 85.18 66.54 85.52 64.85 85.86 C63.17 86.21 61.46 86.33 59.80 86.59 C58.15 86.85 56.56 87.12 54.93 87.42 C53.29 87.72 51.67 88.13 50.00 88.38 C48.33 88.63 46.60 88.88 44.88 88.91 C43.16 88.94 41.40 88.80 39.67 88.55 C37.94 88.31 36.23 87.87 34.50 87.43 C32.76 86.98 31.03 86.48 29.27 85.90 C27.52 85.32 25.67 84.75 23.96 83.93 C22.25 83.11 20.46 82.20 19.03 80.97 C17.60 79.74 16.28 78.22 15.39 76.56 C14.50 74.89 14.00 72.87 13.70 70.96 C13.40 69.05 13.56 66.96 13.60 65.08 C13.64 63.20 13.92 61.38 13.92 59.67 C13.92 57.95 13.83 56.40 13.62 54.79 C13.42 53.18 12.97 51.63 12.69 50.00 C12.42 48.37 12.05 46.68 11.99 45.00 C11.92 43.31 12.02 41.57 12.31 39.90 C12.60 38.23 13.14 36.58 13.71 34.97 C14.28 33.35 15.00 31.79 15.72 30.21 C16.45 28.63 17.19 27.03 18.06 25.49 C18.93 23.95 19.84 22.35 20.96 20.96 C22.08 19.56 23.36 18.22 24.78 17.13 C26.19 16.03 27.83 15.16 29.44 14.39 C31.06 13.63 32.80 13.12 34.48 12.53 C36.16 11.94 37.82 11.43 39.51 10.85 C41.20 10.27 42.86 9.57 44.61 9.06 C46.36 8.54 48.18 7.93 50.00 7.76 C51.82 7.58 53.76 7.59 55.53 8.02 C57.30 8.45 59.07 9.34 60.62 10.35 C62.18 11.36 63.56 12.82 64.87 14.09 C66.18 15.37 67.28 16.80 68.48 17.99 C69.68 19.18 70.82 20.24 72.08 21.23 C73.34 22.23 74.70 23.02 76.04 23.96 C77.38 24.91 78.82 25.80 80.12 26.89 C81.42 27.97 82.68 29.17 83.82 30.48 C84.95 31.78 85.96 33.22 86.94 34.70 C87.91 36.18 88.82 37.74 89.66 39.37 C90.50 41.00 91.37 42.70 91.98 44.47 C92.59 46.24 93.17 48.14 93.32 50.00Z");ring.appendChild(path);
+    ring.style.left=x+"px";ring.style.top=y+"px";document.body.appendChild(ring);
+    // identical shape, size, centre and timing as the reveal mask, so the ring sits exactly on the wavefront
+    ring.animate([{width:"0px",height:"0px",opacity:.9},{opacity:.85,offset:.75},{width:end+"px",height:end+"px",opacity:0}],
+      {duration:D,easing:EASE}).finished.then(()=>ring.remove());
+  });
+  vt.finished.finally(()=>root.classList.remove("vt-lang"));
+}));
+const calm=matchMedia("(prefers-reduced-motion: reduce)");
+document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{
+  filter=b.dataset.filter;
+  document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  document.startViewTransition&&!calm.matches?document.startViewTransition(renderGrid):renderGrid();
+}));
+
+/* Project dialog */
+const dlg=document.getElementById("dialog");
+let lastTrigger=null;
+grid.addEventListener("click",e=>{const b=e.target.closest(".card");if(!b)return;lastTrigger=b.querySelector(".open");
+  const p=projects.find(x=>x.id===b.dataset.id),lb=t("labels");
+  document.getElementById("dlgKind").textContent=L(KIND[p.kind]);
+  document.getElementById("dlgTitle").textContent=L(p.title);
+  const sub=document.getElementById("dlgSub");sub.textContent=L(p.sub);sub.hidden=!p.sub;
+  let h=p.text[lang].map(x=>`<p>${x}</p>`).join("");
+  if(p.role) h+=`<h3>${t("role")}</h3><p>${L(p.role)}</p>`;
+  if(p.credits) h+=`<h3>${t("credits")}</h3><p class="credits">${L(p.credits)}</p>`;
+  document.getElementById("dlgText").innerHTML=h;
+  const rows=[[lb.type,L(KIND[p.kind])]];
+  if(p.place) rows.push([lb.place,L(p.place)]);
+  if(p.year||p.yearPlain) rows.push([lb.year,p.year?L(p.year):p.yearPlain]);
+  if(p.context) rows.push([lb.context,L(p.context)]);
+  if(p.mentors) rows.push([lb.mentors,p.mentors]);
+  if(p.team) rows.push([lb.team,p.team]);
+  dl(document.getElementById("dlgFacts"),rows);
+  const [lk,lc]=p.images[0],rest=p.images.slice(1);
+  document.getElementById("dlgLead").innerHTML=`<img src="${IMG(lk)}" alt="${imgAlt(p,lc)}"><figcaption aria-hidden="true">${L(lc)}</figcaption>`;
+  document.getElementById("dlgGallery").innerHTML=rest.map(([k,c],i)=>`<figure class="${rest.length%2===1&&i===rest.length-1?"full":""}"><img src="${IMG(k)}" alt="${imgAlt(p,c)}" loading="lazy" decoding="async"><figcaption aria-hidden="true">${L(c)}</figcaption></figure>`).join("");
+  document.getElementById("dlgGallery").hidden=!rest.length;
+  dlg.showModal();dlg.scrollTop=0;});
+document.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{const d=document.getElementById(b.dataset.open);revealContact(d);d.showModal();}));
+document.querySelectorAll("dialog").forEach(d=>d.addEventListener("close",()=>{if(d.id==="dialog"&&lastTrigger&&document.contains(lastTrigger))lastTrigger.focus();}));
+document.querySelectorAll("dialog").forEach(d=>{d.querySelector(".close").addEventListener("click",()=>d.close());d.addEventListener("click",e=>{if(e.target===d)d.close()});});
+
+
+/* Name morphs into the header lockup while scrolling: each line travels to its own word */
+(()=>{
+  const lock=document.querySelector("header.site .lockup"),txt=lock.querySelector(".ltxt"),mark=lock.querySelector(".mark");
+  const h1=document.querySelector(".hero h1"),lines=[...h1.querySelectorAll(".mv")];
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)");
+  const DIST=230;
+  let cur=0,running=false;
+  const ease=x=>1-Math.pow(1-x,3);
+  function alignName(){
+    const cs=getComputedStyle(h1),fs=parseFloat(cs.fontSize),lh=parseFloat(cs.lineHeight)||fs*.9;
+    const c=document.createElement("canvas").getContext("2d");c.font=`${cs.fontWeight} ${fs}px ${cs.fontFamily}`;
+    const m=c.measureText("T"),asc=m.fontBoundingBoxAscent||fs*.9,desc=m.fontBoundingBoxDescent||fs*.25,cap=m.actualBoundingBoxAscent||fs*.7;
+    const capOffset=(lh-(asc+desc))/2+(asc-cap);
+    const header=document.querySelector("header.site").offsetHeight;
+    // start in the header row only when it can't collide with the navigation; otherwise start just below the header
+    const navLeft=document.querySelector("header.site .right").getBoundingClientRect().left;
+    const firstRight=h1.getBoundingClientRect().left+lines[0].offsetWidth;
+    const logoOnly=getComputedStyle(txt).display==="none";
+    const below=logoOnly||firstRight+24>navLeft;
+    h1.style.setProperty("--nameTop",below?`${header+Math.round(Math.max(12,header*.25))}px`:`${Math.round((header-26)/2-capOffset)}px`);
+  }
+  function targets(){
+    if(getComputedStyle(txt).display==="none"){const r=mark.getBoundingClientRect();return lines.map(()=>r)}
+    return lines.map(l=>lock.querySelector("."+l.dataset.t).getBoundingClientRect());
+  }
+  // positions are read from layout (offsets), which transforms never change, so fonts loading or resizing can't leave them stale
+  function geo(){
+    const y=scrollY,hr=h1.getBoundingClientRect();
+    return lines.map(l=>{let el=l,ot=0,ol=0;while(el&&el!==h1){ot+=el.offsetTop;ol+=el.offsetLeft;el=el.offsetParent;}
+      return{docTop:hr.top+ot+y,left:hr.left+ol,w:l.offsetWidth,h:l.offsetHeight}});
+  }
+  // scroll position at which the first line reaches its spot in the header; until then the name scrolls normally
+  function startAt(g,tg){const t=tg[0],b=g[0];return Math.max(0,b.docTop-(t.top+(t.height-b.h*t.width/b.w)/2));}
+  function apply(p){
+    const e=ease(p),tg=targets(),y=scrollY,g=geo(),S0=startAt(g,tg);
+    lines.forEach((l,i)=>{
+      const t=tg[i],b=g[i];
+      if(y<S0||e===0){l.style.transform="";l.style.opacity="";return;}
+      const sc=1+(t.width/b.w-1)*e;
+      const endTop=t.top+(t.height-b.h*t.width/b.w)/2;
+      const lineStart=b.docTop-S0;           // where the line sits when the transition begins
+      const natTop=b.docTop-y;
+      const dy=lineStart+(endTop-lineStart)*e-natTop, dx=(t.left-b.left)*e;
+      l.style.transform=`translate3d(${dx}px,${dy}px,0) scale(${sc})`;
+      l.style.opacity=e<.88?1:Math.max(0,1-(e-.88)/.12);
+    });
+    const f=Math.min(1,Math.max(0,(e-.88)/.12)),fe=f*f*(3-2*f);
+    lock.style.opacity=fe;
+    mark.style.opacity=fe;
+    mark.style.transform=fe>=1?"":`scale(${.6+.4*fe}) rotate(${-90*(1-fe)}deg)`;
+    lock.classList.toggle("show",fe>.98);lock.inert=!(fe>.98);
+  }
+  const goalNow=()=>{const S0=startAt(geo(),targets());return Math.min(1,Math.max(0,(scrollY-S0)/DIST));};
+  function tick(){
+    const goal=goalNow();
+    cur+=(goal-cur)*.12;
+    if(Math.abs(goal-cur)<.0015) cur=goal;
+    apply(cur);
+    if(cur!==goal) requestAnimationFrame(tick); else running=false;
+  }
+  function onScroll(){
+    if(reduce.matches){const on=scrollY>h1.offsetTop+h1.offsetHeight;lock.classList.toggle("show",on);lock.inert=!on;lock.style.opacity=on?1:0;mark.style.opacity=on?1:0;return;}
+    if(!running){running=true;requestAnimationFrame(tick)}
+  }
+  function refresh(){if(reduce.matches)onScroll();else{cur=goalNow();apply(cur);}}
+  addEventListener("scroll",onScroll,{passive:true});
+  addEventListener("resize",refresh);
+  if(window.ResizeObserver) new ResizeObserver(()=>requestAnimationFrame(refresh)).observe(h1);
+  refresh();
+  if(document.fonts){document.fonts.ready.then(refresh);document.fonts.addEventListener&&document.fonts.addEventListener("loadingdone",refresh);}
+})();
+
+/* Header + active nav */
+const header=document.getElementById("header");
+addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>8),{passive:true});
+const links=[...document.querySelectorAll("nav a")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.hash==="#"+e.target.id?a.setAttribute("aria-current","location"):a.removeAttribute("aria-current"))}),{rootMargin:"-45% 0px -50% 0px"});
+["work","about","contact"].forEach(id=>io.observe(document.getElementById(id)));
+</script>
+</body>
 </html>
