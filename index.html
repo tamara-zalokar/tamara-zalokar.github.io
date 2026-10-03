@@ -161,11 +161,13 @@
   .hero-photo figcaption{margin-top:.75rem;color:var(--stone);font-size:.875rem}
   .dwg{width:100%;height:auto;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round}
   .dwg *{vector-effect:non-scaling-stroke}
-  .dwg .thin{stroke-width:.7;opacity:.8}
+  .dwg .thin{stroke-width:.7;opacity:.85}
+  .dwg .fine{stroke-width:.45;opacity:.7}
+  .dwg .ground{stroke-width:2.2}
   .dwg .fill{fill:currentColor;fill-opacity:.12}
   .dwg .solid{fill:currentColor;fill-opacity:.85}
   .dwg .clad{fill:currentColor;fill-opacity:.32}
-  .animate .dwg *{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2s cubic-bezier(.6,.1,.2,1) forwards;animation-delay:calc(var(--i,0) * 9ms + .4s)}
+  .animate .dwg *{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2s cubic-bezier(.6,.1,.2,1) forwards;animation-delay:calc(var(--i,0) * 1ms + .4s)}
   .animate .dwg g{stroke-dasharray:none;stroke-dashoffset:0;animation:none}
   .animate .dwg .clad{fill-opacity:0;animation:draw 2s cubic-bezier(.6,.1,.2,1) forwards,cladIn .8s 2.4s forwards}
   @keyframes cladIn{to{fill-opacity:.32}}
@@ -707,47 +709,83 @@ function skyline(){
   s+=sP("518,160 518,124 524,116 530,124 530,160")+sR(522,132,4,7,"thin");
   s+=sP("444,160 444,166 518,166 518,160","thin");
   s+=`</g><g transform="translate(210,0)">`;
-  // Nebotičnik
-  s+=sR(470,96,56,134)+sR(478,80,40,16)+sR(487,66,22,14)+sL(498,66,498,44)+sC(498,42,2.5);
-  for(let y=106;y<226;y+=11) s+=sL(470,y,526,y,"thin");
-  [484,498,512].forEach(x=>s+=sL(x,96,x,230,"thin"));
-  s+=tree(452,22,11)+tree(550,26,13);
-  // Thlagong
-  s+=sP("572,182 806,176")+sP("676,160 806,154");
-  [690,730,770].forEach(x=>s+=sL(x,159,x,177,"thin"));
-  s+=sR(582,186,214,44,"fill");
-  [[598,640],[656,698],[714,756]].forEach(([a,b])=>{s+=sR(a,192,b-a,38);for(let y=197;y<226;y+=7)for(let x=a+5;x<b-3;x+=8)s+=sL(x,y,x+3,y,"thin")});
-  s+=sR(764,196,22,34,"thin");
-  for(let x=590;x<806;x+=24) s+=sL(x,180,x,186,"thin");
-  // Karlsruhe: Pyramid and Palace
-  s+=sP("836,222 860,176 884,222")+sR(830,222,60,8);
-  s+=sR(910,172,74,58)+sR(1064,172,74,58)+sP("906,172 918,160 976,160 988,172")+sP("1060,172 1072,160 1130,160 1142,172");
-  s+=sR(984,140,80,90)+sP("998,140 1024,126 1050,140")+sR(1009,96,30,30)+sR(1015,76,18,20)+sP("1013,76 1024,62 1035,76")+sL(1024,62,1024,48)+sC(1024,46,2.5);
-  for(let x=918;x<984;x+=12)s+=sR(x,186,5,10,"thin");
-  for(let x=1072;x<1136;x+=12)s+=sR(x,186,5,10,"thin");
-  [994,1008,1022,1036,1050].forEach(x=>s+=sR(x,160,6,14,"thin"));
-  s+=sR(1014,200,20,30,"thin");
-  s+=tree(1160,24,12);
-  // Riesenrad
-  const cx=1240,cy=128,r=74;
-  s+=sC(cx,cy,r)+sC(cx,cy,66,"thin")+sC(cx,cy,6);
-  for(let i=0;i<15;i++){const a=i/15*Math.PI*2,x=cx+Math.cos(a)*r,y=cy+Math.sin(a)*r;s+=sL(cx,cy,cx+Math.cos(a)*66,cy+Math.sin(a)*66,"thin")+sR(x-4,y,8,9,"fill")}
-  s+=sL(cx,cy,1200,230)+sL(cx,cy,1280,230)+sR(1190,214,100,16,"fill");
-  // Stephansdom
-  s+=sR(1362,150,168,80)+sP("1362,150 1386,96 1506,96 1530,150");
-  for(let i=0;i<7;i++){const x=1392+i*17;s+=sP(`${x},102 ${x+8},112 ${x+16},102`,"thin");s+=sP(`${x-4},122 ${x+6},132 ${x+16},122`,"thin")}
-  for(let x=1378;x<1520;x+=22) s+=sD(`M${x} 230 V192 Q${x+6} 182 ${x+12} 192 V230`,"thin");
-  s+=sR(1330,128,30,102)+sP("1330,128 1345,108 1360,128")+sR(1338,150,14,26,"thin");
-  s+=sP("1534,230 1534,126 1542,96 1548,62 1553,30 1556,8 1559,30 1564,62 1570,96 1578,126 1578,230");
-  for(let y=142;y<220;y+=26) s+=sR(1550,y,8,16,"thin");
-  s+=sL(1543,96,1569,96,"thin")+sL(1548,62,1564,62,"thin");
+  const F="fine";
+  const deco=(x,b,h,r)=>sL(x,b,x,b-h,"thin")+sD(`M${x-r} ${b-h-r*.2} q${r*.2} ${-r*1.1} ${r} ${-r*1.05} q${r*.9} ${-r*.1} ${r} ${r*1.05} q${-.1*r} ${r*.8} ${-r} ${r*.75} q${-r*.9} ${.05*r} ${-r} ${-r*.75}`,"thin");
+  const lancet=(x0,x1,b,t)=>{const m=(x0+x1)/2,w=x1-x0;return sD(`M${x0} ${b} V${t+w*.6} Q${x0} ${t+w*.1} ${m} ${t} Q${x1} ${t+w*.1} ${x1} ${t+w*.6} V${b}`,"thin")+sL(m,b,m,t+w*.45,F);};
+  // ---- Nebotičnik, Ljubljana (1933): two-storey base, 9-storey shaft, stepped crown with colonnaded lantern
+  s+=deco(452,230,20,9);
+  s+=sR(470,196,56,34)+sL(468,196,528,196)+sL(468,193,528,193,"thin");
+  [474,488,502,516].forEach(x=>s+=sR(x,204,8,22,"thin"));
+  s+=sR(472,78,52,115);
+  for(let y=88;y<190;y+=11){s+=sL(472,y-1,524,y-1,F);[476,488,502,514].forEach(x=>s+=sR(x,y,6,7,"thin"));}
+  s+=sL(486,78,486,193,F)+sL(510,78,510,193,F);
+  s+=sL(469,78,527,78)+sL(469,75,527,75,"thin");
+  s+=sR(478,62,40,13);for(let x=481;x<517;x+=4)s+=sL(x,66,x,75,F);s+=sL(476,62,520,62);
+  s+=sR(486,50,24,12);for(let x=489;x<508;x+=4)s+=sL(x,50,x,62,"thin");
+  s+=sD("M484 50 Q498 36 512 50")+sL(498,43,498,24)+sC(498,22.5,1.8);
+  s+=deco(548,230,26,12);
+  // ---- Thlagong, Waterberg (2024): rammed-earth walls, perforated brick screens, floating steel roof
+  s+=sP("566,187 812,183")+sP("566,189.5 812,185.5","thin");
+  for(let x=576;x<810;x+=18)s+=sL(x,186.5,x,188.5,F);
+  s+=sR(580,193,222,37,"fill");
+  [[580,604],[790,802]].forEach(([a,b])=>{for(let y=199;y<230;y+=5.5)s+=sD(`M${a} ${y} q${(b-a)/3} ${-.8} ${(b-a)/2} 0 t${(b-a)/2} 0`,F);});
+  [[604,640],[652,688],[700,736],[748,784]].forEach(([a,b],i)=>{s+=sR(a,197,b-a,33);for(let r=0,y=200;y<228;y+=4,r++)for(let x=a+3+(r%2)*3;x<b-2;x+=6)s+=sR(x,y,2.4,2,F);
+    if(i<3)s+=sR(b,201,12,29,"solid");});
+  s+=sR(784,201,6,29,"solid");
+  [600,700,760,808].forEach(x=>s+=sL(x,186,x,193,"thin"));
+  s+=sP("698,170 816,165")+[712,752,792].map(x=>sL(x,169.5,x,186,"thin")).join("");
+  s+=sL(590,226,590,214,F)+sC(590,212,2,F);
+  // ---- Karlsruhe: Pyramide on the Marktplatz (1823)
+  s+=sR(830,224,60,6)+sR(834,219,52,5,"thin");
+  s+=sP("838,219 860,170 882,219");
+  for(let y=184;y<219;y+=7){const h=(219-y)/49*22;s+=sL(860-(22-h),y,860+(22-h),y,F);}
+  // ---- Karlsruhe Palace (1715): corps de logis with pediment, mansard roofs with dormers, Schlossturm
+  const wing=(a,b)=>{let w=sR(a,168,b-a,62)+sL(a-2,168,b+2,168)+sL(a-2,165,b+2,165,"thin")+sP(`${a},165 ${a+5},151 ${b-5},151 ${b},165`)+sP(`${a+5},151 ${a+10},146 ${b-10},146 ${b-5},151`,"thin");
+    for(let x=a+6;x<b-6;x+=11){w+=sD(`M${x} 230 V219 Q${x+3.5} 214 ${x+7} 219 V230`,"thin")+sR(x,198,7,12,"thin")+sR(x+.5,179,6,8,"thin")+sR(x+1.5,154,4,6,F)+sP(`${x+1},154 ${x+3.5},151 ${x+6},154`,F);}
+    return w;};
+  s+=wing(906,982)+wing(1066,1142);
+  s+=sR(982,150,84,80)+sL(980,150,1068,150)+sL(980,147,1068,147,"thin");
+  s+=sP("998,147 1024,132 1050,147")+sC(1024,141,3,"thin");
+  [998,1050].forEach(x=>s+=sL(x,150,x,230,F));
+  for(let x=986;x<1062;x+=11){s+=sR(x,182,7,14,"thin")+sR(x+.5,160,6,10,"thin");}
+  s+=sD("M1016 230 V214 Q1024 205 1032 214 V230")+sD("M1002 230 V217 Q1007 212 1012 217 V230","thin")+sD("M1036 230 V217 Q1041 212 1046 217 V230","thin");
+  s+=sR(1011,96,26,36)+sL(1009,96,1039,96)+sR(1017,104,6,14,"thin")+sR(1025,104,6,14,"thin");
+  s+=sR(1014,74,20,22)+sD("M1017 96 V84 Q1019.5 80 1022 84 V96","thin")+sD("M1026 96 V84 Q1028.5 80 1031 84 V96","thin");
+  s+=sD("M1012 74 Q1013 58 1024 54 Q1035 58 1036 74")+sR(1020,46,8,8,"thin")+sP("1019,46 1024,40 1029,46","thin")+sL(1024,40,1024,30)+sC(1024,29,1.4);
+  s+=deco(1158,230,24,11);
+  // ---- Wiener Riesenrad (1897): lattice rim, cable spokes, 15 cabins, braced A-frame
+  const cx=1240,cy=116,r=78;
+  s+=sC(cx,cy,r)+sC(cx,cy,r-6,"thin")+sC(cx,cy,8)+sC(cx,cy,22,"thin");
+  let zz="";for(let i=0;i<=72;i++){const a=i/72*Math.PI*2,rr=i%2?r:r-6;zz+=`${(cx+Math.cos(a)*rr).toFixed(1)},${(cy+Math.sin(a)*rr).toFixed(1)} `;}s+=sP(zz,F);
+  for(let i=0;i<30;i++){const a=i/30*Math.PI*2;s+=sL(cx+Math.cos(a)*8,cy+Math.sin(a)*8,cx+Math.cos(a+.18)*(r-6),cy+Math.sin(a+.18)*(r-6),F);}
+  for(let i=0;i<15;i++){const a=i/15*Math.PI*2-Math.PI/2,x=cx+Math.cos(a)*r,y=cy+Math.sin(a)*r;s+=sL(x,y,x,y+2,"thin")+sR(x-5,y+2,10,7,"fill")+sP(`${x-5.5},${y+2} ${x},${y} ${x+5.5},${y+2}`,F)+sL(x-3,y+4,x-3,y+7,F)+sL(x+3,y+4,x+3,y+7,F);}
+  const leg=(x2)=>{const dx=x2-cx,dy=214-cy;let l=sL(cx-3,cy,x2-4,214)+sL(cx+3,cy,x2+4,214);for(let k=1;k<9;k++){const t1=k/9,t2=(k+.5)/9;l+=sL(cx-3+dx*t1-4*t1,cy+dy*t1,cx+3+dx*t2+4*t2,cy+dy*t2,F);}return l;};
+  s+=leg(1196)+leg(1284);
+  s+=sR(1184,212,112,18,"fill")+sP("1182,212 1240,204 1298,212","thin");for(let x=1194;x<1290;x+=14)s+=sR(x,218,8,9,"thin");
+  // ---- Stephansdom, Vienna: Heidenturm, nave with buttresses and lancets, chevron roof, North Tower cap, South Tower spire
+  s+=sR(1352,154,14,76)+sL(1350,154,1368,154)+sP("1351,154 1359,124 1367,154")+sL(1359,124,1359,116,"thin");
+  s+=sR(1355,168,4,10,F)+sR(1359,190,4,12,F);
+  s+=sR(1392,124,18,14,"thin")+sD("M1390 124 Q1401 106 1412 124","thin")+sL(1401,111,1401,102,"thin")+sC(1401,101,1.2,F);
+  s+=sP("1366,189 1374,138 1502,138 1526,189")+sL(1366,189,1526,189);
+  for(let row=0;row<4;row++){const y0=146+row*11,x0=1373-row*-0.0+row*1.7,x1=1505+row*5.5;let z=`${x0},${y0}`;for(let x=x0+6,k=0;x<x1;x+=6,k++)z+=` ${x},${k%2?y0:y0+6}`;s+=sP(z,F);}
+  s+=sR(1366,189,160,41);
+  for(let x=1366;x<=1526;x+=16){s+=sR(x-2,182,4,48,"thin")+sP(`${x-2},182 ${x},176 ${x+2},182`,F);}
+  for(let x=1370;x<1522;x+=16){if(x>1440&&x<1478)continue;s+=lancet(x+2,x+10,224,195);}
+  s+=sR(1446,170,30,60)+sL(1444,170,1478,170)+lancet(1454,1468,222,182);
+  s+=sR(1450,122,22,48)+sP("1450,132 1455,122 1461,132","thin")+sP("1461,132 1467,122 1472,132","thin")+lancet(1455,1467,165,138);
+  [1449,1473].forEach(x=>s+=sL(x,170,x,116,F)+sP(`${x-1.5},118 ${x},110 ${x+1.5},118`,F));
+  s+=sR(1453,92,16,30)+lancet(1457,1465,118,98);
+  s+=sP("1453,92 1457.5,60 1461,22 1464.5,60 1469,92");
+  for(let y=34;y<90;y+=7){const t=(y-22)/70,hw=8*t;s+=sL(1461-hw-1.2,y,1461-hw,y-1.2,F)+sL(1461+hw+1.2,y,1461+hw,y-1.2,F);}
+  s+=sL(1456,70,1466,70,F)+sL(1458,48,1464,48,F)+sL(1461,22,1461,16,"thin");
+  s+=deco(1544,230,22,10);
   s+=`</g>`;
-  s+=sL(0,230,1810,230);
+  s+=sL(0,230,1810,230,"ground");
   return s;
 }
 (()=>{const el=document.getElementById("heroDrawing");
   el.innerHTML=`<svg class="dwg" viewBox="0 0 1810 236" preserveAspectRatio="xMidYMax meet" aria-hidden="true">${skyline()}</svg>`;
-  el.querySelectorAll(".dwg *").forEach((n,i)=>n.style.setProperty("--i",i));})();
+  {const all=el.querySelectorAll(".dwg *"),n=all.length;all.forEach((e,i)=>e.style.setProperty("--i",Math.round(i/n*1700)));}})();
 
 
 /* ================= Contact details, protected from simple harvesters =================
